@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tema 3 · Definición del Proyecto y Fundamentos de Software</title>
+<meta name="description" content="Identificación de una problemática, definición de la idea, objetivos, alcance, usuarios y características generales de una solución de software.">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/icons/bootstrap-icons.min.css">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-course fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><span class="brand-mark">DA</span>Diseño de Aplicaciones</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-1.html">1. Historia</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-2.html">2. Arquitectura</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-3.html">3. Proyecto</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-4.html">4. Requerimientos</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-5.html">5. Modelado</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-6.html">6. Git/GitHub</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-7.html">7. Negocios</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="topic-hero" style="padding-top:7.5rem;">
+  <div class="container">
+    <span class="topic-num">Tema 03 / 07</span>
+    <h1>Definición del Proyecto y Fundamentos de Software</h1>
+    <p class="hero-desc">
+      Antes de escribir una sola línea de código hay un problema real que resolver.
+      Este tema trabaja el paso de una problemática a una idea de solución concreta:
+      objetivos, alcance, usuarios y características generales del software a construir.
+    </p>
+    <div class="topic-meta">
+      <div class="meta-item"><strong>Duración estimada</strong>2.5 horas</div>
+      <div class="meta-item"><strong>Nivel</strong>Intermedio</div>
+      <div class="meta-item"><strong>Entregable</strong>Ficha de definición del proyecto</div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9">
+
+      <section class="section" id="objetivos">
+        <span class="section-kicker"><i class="bi bi-flag"></i>Objetivos de aprendizaje</span>
+        <h2>Qué vas a lograr en este tema</h2>
+        <ul class="check-list">
+          <li data-toggle-check><i class="bi bi-circle"></i> Identificar una problemática o necesidad real que pueda resolverse con software.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Redactar objetivos claros y un alcance delimitado para un proyecto de software.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Describir los usuarios de la solución y sus características generales.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Aplicar una herramienta de análisis de problemas para fundamentar la idea del proyecto.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="definiciones">
+        <span class="section-kicker"><i class="bi bi-journal-bookmark"></i>Definiciones clave</span>
+        <h2>Vocabulario base del tema</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="def-card"><span class="def-term"><i class="bi bi-exclamation-circle"></i>Problemática o necesidad</span><p>Situación real, identificable y verificable que genera una dificultad o carencia para un grupo de personas u organización.</p></div>
+          </div>
+          <div class="col-md-6">
+            <div class="def-card"><span class="def-term"><i class="bi bi-lightbulb"></i>Idea de solución</span><p>Propuesta general de cómo el software abordará la problemática identificada, sin entrar aún en el detalle técnico.</p></div>
+          </div>
+          <div class="col-md-6">
+            <div class="def-card"><span class="def-term"><i class="bi bi-bullseye"></i>Objetivo general</span><p>Enunciado que resume el propósito principal del proyecto: el cambio que se espera lograr con la solución.</p></div>
+          </div>
+          <div class="col-md-6">
+            <div class="def-card"><span class="def-term"><i class="bi bi-list-check"></i>Objetivos específicos</span><p>Pasos concretos y medibles que, sumados, permiten alcanzar el objetivo general del proyecto.</p></div>
+          </div>
+          <div class="col-md-6">
+            <div class="def-card"><span class="def-term"><i class="bi bi-bounding-box-circles"></i>Alcance</span><p>Límites explícitos de lo que el proyecto incluye y lo que queda deliberadamente por fuera de esta versión de la solución.</p></div>
+          </div>
+          <div class="col-md-6">
+            <div class="def-card"><span class="def-term"><i class="bi bi-person-check"></i>Usuario objetivo</span><p>Perfil de persona o rol que utilizará directamente la solución de software y cuyas necesidades orientan las decisiones del proyecto.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="del-problema-a-la-idea">
+        <span class="section-kicker"><i class="bi bi-lightbulb"></i>Contenido</span>
+        <h2>De la problemática a la idea de solución</h2>
+        <p class="text-muted-soft container-text">
+          Todo proyecto de software parte de una necesidad real. Saltar directo a "qué
+          construir" sin entender bien el problema es una de las causas más comunes de
+          proyectos que no generan valor. Dos herramientas ayudan a evitarlo:
+        </p>
+        <div class="row g-3 mt-2">
+          <div class="col-md-6">
+            <div class="panel panel-accent h-100">
+              <h3 class="h6"><i class="bi bi-diagram-3"></i>Árbol de problemas</h3>
+              <p class="text-muted-soft small mb-0">
+                Organiza el problema central, sus causas (raíces) y sus consecuencias
+                (ramas), permitiendo distinguir el síntoma del problema de fondo antes de
+                proponer una solución.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-warm h-100">
+              <h3 class="h6"><i class="bi bi-people"></i>Design Thinking</h3>
+              <p class="text-muted-soft small mb-0">
+                Proceso centrado en las personas con cinco fases: empatizar, definir,
+                idear, prototipar y probar. Ayuda a validar que la idea de solución
+                responde a una necesidad real antes de construirla.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="componentes-proyecto">
+        <span class="section-kicker"><i class="bi bi-list-check"></i>Contenido</span>
+        <h2>Componentes de la definición del proyecto</h2>
+        <div class="table-responsive">
+          <table class="table table-req">
+            <thead><tr><th>Componente</th><th>Pregunta que responde</th><th>Ejemplo breve</th></tr></thead>
+            <tbody>
+              <tr><td class="strong-cell">Problemática</td><td>¿Qué dificultad enfrentan las personas hoy?</td><td>Los estudiantes de varias sedes no tienen un lugar único para consultar horarios de laboratorio.</td></tr>
+              <tr><td class="strong-cell">Idea de solución</td><td>¿Cómo se propone resolverla?</td><td>Una aplicación web para consultar y reservar horarios de laboratorio.</td></tr>
+              <tr><td class="strong-cell">Objetivo general</td><td>¿Qué se espera lograr en conjunto?</td><td>Centralizar la reserva de laboratorios para reducir cruces de horario.</td></tr>
+              <tr><td class="strong-cell">Alcance</td><td>¿Qué incluye y qué no incluye esta versión?</td><td>Incluye reserva y consulta; no incluye pagos ni control de asistencia.</td></tr>
+              <tr><td class="strong-cell">Usuarios</td><td>¿Quién usará la solución?</td><td>Estudiantes, docentes y personal administrativo de laboratorio.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="videos">
+        <span class="section-kicker"><i class="bi bi-play-btn"></i>Video</span>
+        <h2>Para ver antes de continuar</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/_ul3wfKss58" title="Metodología Design Thinking en español" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p class="video-caption">"Metodología Design Thinking en español: aprende a aplicar sus fases con ejemplos".</p>
+          </div>
+          <div class="col-md-6">
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/85_7tZkuot8" title="Objetivo, alcance y límites" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p class="video-caption">"Objetivo, alcance y límites" — análisis de sistemas.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="recursos">
+        <span class="section-kicker"><i class="bi bi-link-45deg"></i>Páginas de consulta</span>
+        <h2>Para profundizar</h2>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <a class="resource-link" href="https://www.interaction-design.org/literature/topics/design-thinking" target="_blank" rel="noopener">
+              <i class="bi bi-box-arrow-up-right"></i>
+              <div><h4>Interaction Design Foundation</h4><p>Fundamentos y fases de Design Thinking, en inglés y español.</p></div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a class="resource-link" href="https://www.pmi.org/learning/library" target="_blank" rel="noopener">
+              <i class="bi bi-box-arrow-up-right"></i>
+              <div><h4>Biblioteca <abbr class="acronym" title="Project Management Institute — nombre original en inglés">PMI</abbr></h4><p>Recursos del Project Management Institute (Instituto de Gestión de Proyectos) sobre alcance y definición de proyectos.</p></div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a class="resource-link" href="https://asana.com/es/resources/design-thinking-process" target="_blank" rel="noopener">
+              <i class="bi bi-box-arrow-up-right"></i>
+              <div><h4>Proceso de Design Thinking</h4><p>Explicación detallada de cada fase con ejemplos prácticos.</p></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="taller">
+        <span class="section-kicker"><i class="bi bi-tools"></i>Taller práctico</span>
+        <h2>Ficha de definición de tu proyecto</h2>
+        <div class="workshop-box">
+          <div class="workshop-head">
+            <div><span class="badge-level">Individual o en pareja · 90 min</span></div>
+            <a href="assets/pdf/taller-tema3.pdf" class="btn btn-accent btn-sm" download>
+              <i class="bi bi-file-earmark-arrow-down"></i> Descargar guía en PDF
+            </a>
+          </div>
+          <ol class="workshop-steps">
+            <li><strong>Observa tu entorno cercano</strong> (tu universidad, tu barrio, tu trabajo) y anota tres problemáticas reales que identifiques.</li>
+            <li><strong>Elige una y constrúyele un árbol de problemas</strong>: causas, problema central y consecuencias.</li>
+            <li><strong>Redacta la idea de solución</strong> en un máximo de tres frases, sin detalle técnico todavía.</li>
+            <li><strong>Escribe un objetivo general y tres objetivos específicos</strong> para tu proyecto.</li>
+            <li><strong>Define el alcance</strong>: dos listas claras, "incluye" y "no incluye", para esta primera versión.</li>
+            <li><strong>Describe a tus usuarios</strong>: al menos dos perfiles distintos que usarían la solución.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="autoevaluacion">
+        <span class="section-kicker"><i class="bi bi-check2-square"></i>Autoevaluación</span>
+        <h2>¿Quedó claro el tema?</h2>
+        <ul class="check-list">
+          <li data-toggle-check><i class="bi bi-circle"></i> Puedo diferenciar una problemática de una idea de solución.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Puedo redactar un objetivo general y objetivos específicos coherentes entre sí.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Puedo delimitar el alcance de un proyecto en "incluye" y "no incluye".</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Puedo describir al menos dos perfiles de usuario para mi proyecto.</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <div class="col-lg-3 d-none d-lg-block">
+      <nav class="toc">
+        <span class="toc-title">En este tema</span>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#definiciones">Definiciones clave</a>
+        <a href="#del-problema-a-la-idea">De la problemática a la idea</a>
+        <a href="#componentes-proyecto">Componentes del proyecto</a>
+        <a href="#videos">Video</a>
+        <a href="#recursos">Recursos de consulta</a>
+        <a href="#taller">Taller práctico</a>
+        <a href="#autoevaluacion">Autoevaluación</a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="topic-pager">
+    <a href="tema-2.html" class="pager-link">
+      <span class="pager-label">← Tema anterior</span>
+      Arquitectura y Ecosistema Tecnológico
+    </a>
+    <a href="tema-4.html" class="pager-link text-end">
+      <span class="pager-label">Siguiente tema →</span>
+      Análisis de Requerimientos
+    </a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between gap-3">
+      <div>
+        <div class="footer-brand">Diseño de Aplicaciones</div>
+        <div>Material educativo de acceso abierto para estudiantes de desarrollo de software.</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="tema-1.html">Temas</a>
+        <a href="tema-7.html">Casos de negocio</a>
+      </div>
+    </div>
+    <div class="footer-author">
+      <p class="footer-quote">
+        “Educar no es llenar sino encender.”
+        <cite>Jorge Wagensberg, profesor y físico español</cite>
+      </p>
+      <div class="footer-signature">Profe Daniel Moraj · Medellín, 2026</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tema 2 · Arquitectura y Ecosistema Tecnológico</title>
+<meta name="description" content="Frontend, backend, API, lenguajes, frameworks, librerías, bases de datos y arquitectura general de una aplicación web y móvil.">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/icons/bootstrap-icons.min.css">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-course fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><span class="brand-mark">DA</span>Diseño de Aplicaciones</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-1.html">1. Historia</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-2.html">2. Arquitectura</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-3.html">3. Proyecto</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-4.html">4. Requerimientos</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-5.html">5. Modelado</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-6.html">6. Git/GitHub</a></li>
+        <li class="nav-item"><a class="nav-link" href="tema-7.html">7. Negocios</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="topic-hero" style="padding-top:7.5rem;">
+  <div class="container">
+    <span class="topic-num">Tema 02 / 07</span>
+    <h1>Arquitectura y Ecosistema Tecnológico</h1>
+    <p class="hero-desc">
+      Frontend, backend, API, lenguajes de programación, frameworks, librerías y bases de
+      datos: un mapa de las piezas que se combinan para construir una aplicación web y
+      móvil actual, y de cómo se comunican entre sí.
+    </p>
+    <div class="topic-meta">
+      <div class="meta-item"><strong>Duración estimada</strong>2 horas</div>
+      <div class="meta-item"><strong>Nivel</strong>Introductorio</div>
+      <div class="meta-item"><strong>Entregable</strong>Diagrama de arquitectura simple</div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9">
+
+      <section class="section" id="objetivos">
+        <span class="section-kicker"><i class="bi bi-flag"></i>Objetivos de aprendizaje</span>
+        <h2>Qué vas a lograr en este tema</h2>
+        <ul class="check-list">
+          <li data-toggle-check><i class="bi bi-circle"></i> Diferenciar frontend y backend, y explicar cómo se comunican mediante una API.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Reconocer la diferencia entre lenguaje, framework y librería.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Ubicar el lugar de una base de datos dentro de la arquitectura de una aplicación.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Dibujar un diagrama simple de la arquitectura general de una aplicación web y móvil.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="definiciones">
+        <span class="section-kicker"><i class="bi bi-journal-bookmark"></i>Definiciones clave</span>
+        <h2>Vocabulario base del tema</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="def-card"><span class="def-term"><i class="bi bi-window"></i>Frontend</span><p>La parte de una aplicación con la que interactúa directamente la persona usuaria: interfaces, pantallas, formularios y navegación visual.</p></div>
+          </div>
+          <div class="col-md-6">
+            <div class="def-card"><span class="def-term"><i class="bi bi-hdd-rack"></i>Backend</span><p>La parte del sistema que corre en el servidor: procesa la lógica de negocio, gestiona datos y responde a las solicitudes del frontend.</p></div>
+          </div>
+          <div class="col-md-6">
+            <div class="def-card"><span class="def-term"><i class="bi bi-plug"></i><abbr class="acronym" title="Application Programming Interface — nombre original en inglés">API</abbr></span><p><span class="gloss-en">Del inglés "Application Programming Interface"</span>, es decir, Interfaz de Programación de Aplicaciones: un conjunto de reglas que permite que dos sistemas (por ejemplo, frontend y backend) intercambien información de forma ordenada.</p></div>
+          </div>
+          <div class="col-md-6">
+            <div class="def-card"><span class="def-term"><i class="bi bi-boxes"></i>Framework</span><p>Estructura de trabajo predefinida que impone una forma de organizar el código y provee piezas ya construidas para acelerar el desarrollo.</p></div>
+          </div>
+          <div class="col-md-6">
+            <div class="def-card"><span class="def-term"><i class="bi bi-book"></i>Librería (o biblioteca)</span><p>Conjunto de funciones reutilizables que el equipo de desarrollo invoca cuando lo necesita, sin que le imponga una estructura general al proyecto.</p></div>
+          </div>
+          <div class="col-md-6">
+            <div class="def-card"><span class="def-term"><i class="bi bi-database"></i>Base de datos</span><p>Sistema organizado para almacenar, consultar y actualizar la información que una aplicación necesita conservar entre un uso y otro.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="arquitectura">
+        <span class="section-kicker"><i class="bi bi-diagram-2"></i>Contenido</span>
+        <h2>Cómo se conectan las piezas</h2>
+        <p class="text-muted-soft container-text">
+          Una aplicación web o móvil típica separa lo que la persona usuaria ve (frontend)
+          de lo que ocurre "detrás de bambalinas" (backend). Ambas capas se comunican
+          mediante una API, y el backend a su vez se apoya en una o varias bases de datos
+          para conservar la información entre sesiones.
+        </p>
+
+        <div class="row g-3 mt-2">
+          <div class="col-md-4">
+            <div class="panel panel-accent h-100">
+              <h3 class="h6"><i class="bi bi-window"></i>Cliente (Frontend)</h3>
+              <p class="text-muted-soft small">HTML, CSS y JavaScript, a menudo con un framework como React, Vue o Angular. Corre en el navegador o en la app móvil de la persona usuaria.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel panel-warm h-100">
+              <h3 class="h6"><i class="bi bi-plug"></i>API</h3>
+              <p class="text-muted-soft small">Contrato de comunicación entre cliente y servidor, comúnmente en formato <abbr class="acronym" title="REpresentational State Transfer — nombre original en inglés">REST</abbr> o GraphQL, transportando datos en <abbr class="acronym" title="JavaScript Object Notation — nombre original en inglés">JSON</abbr> <span class="gloss-en">(ing. "JavaScript Object Notation")</span>.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel panel-accent h-100">
+              <h3 class="h6"><i class="bi bi-hdd-rack"></i>Servidor (Backend)</h3>
+              <p class="text-muted-soft small">Lógica de negocio escrita en lenguajes como Java, Python, PHP, C# o JavaScript (Node.js), que lee y escribe en la base de datos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel mt-4">
+          <h3 class="h6 mb-3"><i class="bi bi-database"></i>Bases de datos: dos grandes familias</h3>
+          <div class="table-responsive">
+            <table class="table table-req mb-0">
+              <thead><tr><th>Tipo</th><th>Cómo organiza los datos</th><th>Ejemplos</th></tr></thead>
+              <tbody>
+                <tr><td class="strong-cell">Relacionales (<abbr class="acronym" title="Structured Query Language — nombre original en inglés">SQL</abbr>)</td><td>Tablas con filas y columnas relacionadas mediante claves. <span class="gloss-en">SQL: ing. "Structured Query Language".</span></td><td>PostgreSQL, MySQL, SQL Server</td></tr>
+                <tr><td class="strong-cell">No relacionales (NoSQL)</td><td>Documentos, pares clave-valor, grafos o columnas anchas, sin un esquema rígido. <span class="gloss-en">NoSQL: ing. "Not only SQL".</span></td><td>MongoDB, Redis, Firebase</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- DIAGRAMA DE ARQUITECTURA WEB Y MÓVIL -->
+      <section class="section" id="diagrama-arquitectura">
+        <span class="section-kicker"><i class="bi bi-diagram-3"></i>Contenido</span>
+        <h2>Diagrama de arquitectura general: app web y móvil</h2>
+        <p class="text-muted-soft container-text">
+          En la práctica, una misma aplicación suele tener más de un cliente: una versión
+          web (navegador) y una versión móvil (iOS/Android), que comparten el mismo
+          backend y la misma base de datos. El siguiente diagrama resume esa arquitectura
+          general, incluyendo las piezas intermedias que rara vez se mencionan en los
+          ejemplos simples: el balanceador de carga, la capa de autenticación, el caché y
+          los servicios de terceros.
+        </p>
+        <div class="panel mt-3 arch-diagram-wrap">
+          <svg viewBox="0 0 920 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de arquitectura general de una aplicación web y móvil">
+            <defs>
+              <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6 Z" fill="#7d848d"/>
+              </marker>
+            </defs>
+            <g font-family="Inter, sans-serif" font-size="12.5">
+              <!-- Clientes -->
+              <rect x="30" y="20" width="180" height="56" rx="5" fill="#2c3035" stroke="#8fb2c4" stroke-width="1.5"/>
+              <text x="120" y="44" text-anchor="middle" fill="#e8eaed" font-weight="600">Cliente web</text>
+              <text x="120" y="62" text-anchor="middle" fill="#a8afb8" font-size="10.5">Navegador · HTML/CSS/JS</text>
+
+              <rect x="240" y="20" width="180" height="56" rx="5" fill="#2c3035" stroke="#8fb2c4" stroke-width="1.5"/>
+              <text x="330" y="44" text-anchor="middle" fill="#e8eaed" font-weight="600">Cliente móvil</text>
+              <text x="330" y="62" text-anchor="middle" fill="#a8afb8" font-size="10.5">iOS / Android · app nativa o híbrida</text>
+
+              <!-- flechas de clientes a gateway -->
+              <path d="M120 76 V100 Q120 112 200 112 H430" fill="none" stroke="#7d848d" stroke-width="1.3" marker-end="url(#arrow2)"/>
+              <path d="M330 76 V112 H430" fill="none" stroke="#7d848d" stroke-width="1.3" marker-end="url(#arrow2)"/>
+              <text x="230" y="100" text-anchor="middle" fill="#a8afb8" font-family="JetBrains Mono, monospace" font-size="10">HTTPS</text>
+
+              <!-- API Gateway / balanceador -->
+              <rect x="440" y="90" width="220" height="56" rx="5" fill="#2c3035" stroke="#c9a97e" stroke-width="1.6"/>
+              <text x="550" y="114" text-anchor="middle" fill="#e8eaed" font-weight="600">API Gateway / balanceador</text>
+              <text x="550" y="132" text-anchor="middle" fill="#a8afb8" font-size="10.5">Enruta y distribuye las solicitudes</text>
+
+              <!-- autenticación -->
+              <rect x="700" y="20" width="190" height="56" rx="5" fill="#2c3035" stroke="#93bda1" stroke-width="1.4"/>
+              <text x="795" y="44" text-anchor="middle" fill="#e8eaed" font-weight="600">Autenticación</text>
+              <text x="795" y="62" text-anchor="middle" fill="#a8afb8" font-size="10.5">Tokens / sesiones (JWT, OAuth)</text>
+              <path d="M660 105 H700" fill="none" stroke="#7d848d" stroke-width="1.2" marker-end="url(#arrow2)" transform="translate(0,-30)"/>
+
+              <!-- flecha gateway a backend -->
+              <path d="M550 146 V190" fill="none" stroke="#7d848d" stroke-width="1.3" marker-end="url(#arrow2)"/>
+              <text x="595" y="172" fill="#a8afb8" font-family="JetBrains Mono, monospace" font-size="10">API REST / GraphQL</text>
+
+              <!-- Backend -->
+              <rect x="360" y="196" width="380" height="72" rx="5" fill="#2c3035" stroke="#8fb2c4" stroke-width="1.8"/>
+              <text x="550" y="226" text-anchor="middle" fill="#e8eaed" font-weight="600" font-size="14">Backend — lógica de negocio</text>
+              <text x="550" y="246" text-anchor="middle" fill="#a8afb8" font-size="10.5">Node.js, Python, Java, PHP, C#…</text>
+              <text x="550" y="262" text-anchor="middle" fill="#a8afb8" font-size="10.5">valida datos, aplica reglas y coordina servicios</text>
+
+              <!-- Caché -->
+              <rect x="30" y="196" width="180" height="60" rx="5" fill="#2c3035" stroke="#93bda1" stroke-width="1.4"/>
+              <text x="120" y="222" text-anchor="middle" fill="#e8eaed" font-weight="600">Caché</text>
+              <text x="120" y="240" text-anchor="middle" fill="#a8afb8" font-size="10.5">Redis / Memcached</text>
+              <path d="M360 224 H210" fill="none" stroke="#7d848d" stroke-width="1.2" marker-end="url(#arrow2)" marker-start="url(#arrow2)"/>
+
+              <!-- backend a base de datos -->
+              <path d="M480 268 V330" fill="none" stroke="#7d848d" stroke-width="1.3" marker-end="url(#arrow2)"/>
+              <path d="M620 268 V330" fill="none" stroke="#7d848d" stroke-width="1.3" marker-end="url(#arrow2)"/>
+
+              <!-- Base de datos -->
+              <rect x="380" y="336" width="180" height="60" rx="5" fill="#2c3035" stroke="#c9a97e" stroke-width="1.6"/>
+              <text x="470" y="362" text-anchor="middle" fill="#e8eaed" font-weight="600">Base de datos</text>
+              <text x="470" y="380" text-anchor="middle" fill="#a8afb8" font-size="10.5">SQL o NoSQL</text>
+
+              <!-- Almacenamiento de archivos -->
+              <rect x="580" y="336" width="190" height="60" rx="5" fill="#2c3035" stroke="#c9a97e" stroke-width="1.4"/>
+              <text x="675" y="362" text-anchor="middle" fill="#e8eaed" font-weight="600">Almacenamiento</text>
+              <text x="675" y="380" text-anchor="middle" fill="#a8afb8" font-size="10.5">Imágenes, archivos (S3, Cloud Storage)</text>
+
+              <!-- Servicios de terceros -->
+              <path d="M740 268 Q800 300 780 336" fill="none" stroke="#7d848d" stroke-width="1.2" marker-end="url(#arrow2)"/>
+              <rect x="700" y="402" width="190" height="60" rx="5" fill="#2c3035" stroke="#93bda1" stroke-width="1.4"/>
+              <text x="795" y="428" text-anchor="middle" fill="#e8eaed" font-weight="600">Servicios externos</text>
+              <text x="795" y="446" text-anchor="middle" fill="#a8afb8" font-size="10.5">Pagos, correo, mapas, notificaciones</text>
+              <path d="M740 268 Q840 330 830 400" fill="none" stroke="#7d848d" stroke-width="1.2" marker-end="url(#arrow2)"/>
+
+              <!-- Nube -->
+              <rect x="20" y="490" width="870" height="46" rx="5" fill="none" stroke="#40464d" stroke-width="1.2" stroke-dasharray="4 3"/>
+              <text x="460" y="518" text-anchor="middle" fill="#7d848d" font-family="JetBrains Mono, monospace" font-size="11">Backend, base de datos, caché y almacenamiento suelen vivir en un mismo proveedor de nube (AWS, Azure, Google Cloud)</text>
+            </g>
+          </svg>
+        </div>
+        <p class="text-muted-soft container-text mt-3">
+          Aunque el cliente cambie (navegador o app móvil), <strong>el backend, la base de
+          datos y los servicios externos se reutilizan</strong>: por eso a esta forma de
+          construir software se le llama "un backend, muchos clientes". Diseñar bien la
+          API es lo que permite que web y móvil evolucionen de forma independiente sin
+          duplicar la lógica de negocio.
+        </p>
+      </section>
+
+      <section class="section section-alt" id="lenguajes-frameworks">
+        <span class="section-kicker"><i class="bi bi-code-slash"></i>Contenido</span>
+        <h2>Lenguajes, frameworks y librerías por capa</h2>
+        <div class="table-responsive">
+          <table class="table table-req">
+            <thead><tr><th>Capa</th><th>Lenguajes comunes</th><th>Frameworks / librerías frecuentes</th></tr></thead>
+            <tbody>
+              <tr><td class="strong-cell">Frontend web</td><td>JavaScript, TypeScript, HTML, CSS</td><td>React, Vue, Angular, Bootstrap, Tailwind</td></tr>
+              <tr><td class="strong-cell">Backend</td><td>JavaScript (Node.js), Python, Java, PHP, C#</td><td>Express, Django, Spring Boot, Laravel, .NET</td></tr>
+              <tr><td class="strong-cell">Móvil</td><td>Kotlin, Swift, Dart, JavaScript</td><td>Jetpack Compose, SwiftUI, Flutter, React Native</td></tr>
+              <tr><td class="strong-cell">Datos</td><td>SQL, Python</td><td>PostgreSQL, MongoDB, pandas</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="videos">
+        <span class="section-kicker"><i class="bi bi-play-btn"></i>Video</span>
+        <h2>Para ver antes de continuar</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/50RbVujPPGs" title="¿Qué es Backend y Frontend?" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p class="video-caption">"¿Qué es BACKEND y FRONTEND? La mejor explicación en español".</p>
+          </div>
+          <div class="col-md-6">
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/oEelu8QMA1g" title="Estilos de arquitecturas de API" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p class="video-caption">"6 Estilos de Arquitecturas de API que debes conocer si eres Backend".</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="recursos">
+        <span class="section-kicker"><i class="bi bi-link-45deg"></i>Páginas de consulta</span>
+        <h2>Para profundizar</h2>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <a class="resource-link" href="https://developer.mozilla.org/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server" target="_blank" rel="noopener">
+              <i class="bi bi-box-arrow-up-right"></i>
+              <div><h4>MDN Web Docs</h4><p>Documentación abierta de Mozilla sobre cómo funciona la web, cliente y servidor.</p></div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a class="resource-link" href="https://restfulapi.net/" target="_blank" rel="noopener">
+              <i class="bi bi-box-arrow-up-right"></i>
+              <div><h4>RESTful API</h4><p>Guía de referencia sobre el estilo arquitectónico REST para APIs.</p></div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a class="resource-link" href="https://www.mongodb.com/es/nosql-explained" target="_blank" rel="noopener">
+              <i class="bi bi-box-arrow-up-right"></i>
+              <div><h4>NoSQL explicado</h4><p>Comparación entre bases de datos relacionales y no relacionales.</p></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="taller">
+        <span class="section-kicker"><i class="bi bi-tools"></i>Taller práctico</span>
+        <h2>Diagrama de arquitectura de una app cotidiana</h2>
+        <div class="workshop-box">
+          <div class="workshop-head">
+            <div><span class="badge-level">Individual · 60 min</span></div>
+            <a href="assets/pdf/taller-tema2.pdf" class="btn btn-accent btn-sm" download>
+              <i class="bi bi-file-earmark-arrow-down"></i> Descargar guía en PDF
+            </a>
+          </div>
+          <ol class="workshop-steps">
+            <li><strong>Elige una app que uses a diario</strong> (por ejemplo, una app de mensajería, de comida o de transporte).</li>
+            <li><strong>Identifica su frontend.</strong> Describe qué pantallas y funciones ve la persona usuaria, tanto en su versión web como en su versión móvil si tiene ambas.</li>
+            <li><strong>Imagina su backend.</strong> Enumera al menos tres tareas que probablemente resuelve el servidor (por ejemplo, autenticar usuarios, calcular una tarifa, guardar un pedido).</li>
+            <li><strong>Ubica la API.</strong> Describe con tus palabras un ejemplo de dato que viaja del frontend al backend y viceversa.</li>
+            <li><strong>Dibuja el diagrama.</strong> Representa con cajas y flechas cliente web, cliente móvil, API, backend, base de datos y al menos un servicio externo, siguiendo el modelo visto en este tema.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="autoevaluacion">
+        <span class="section-kicker"><i class="bi bi-check2-square"></i>Autoevaluación</span>
+        <h2>¿Quedó claro el tema?</h2>
+        <ul class="check-list">
+          <li data-toggle-check><i class="bi bi-circle"></i> Puedo explicar con un ejemplo la diferencia entre frontend y backend.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Puedo explicar para qué sirve una API en una aplicación.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Puedo diferenciar un framework de una librería.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Puedo dibujar la arquitectura general de una app con cliente web, cliente móvil, backend y base de datos compartidos.</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <div class="col-lg-3 d-none d-lg-block">
+      <nav class="toc">
+        <span class="toc-title">En este tema</span>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#definiciones">Definiciones clave</a>
+        <a href="#arquitectura">Cómo se conectan las piezas</a>
+        <a href="#diagrama-arquitectura">Diagrama web y móvil</a>
+        <a href="#lenguajes-frameworks">Lenguajes y frameworks</a>
+        <a href="#videos">Video</a>
+        <a href="#recursos">Recursos de consulta</a>
+        <a href="#taller">Taller práctico</a>
+        <a href="#autoevaluacion">Autoevaluación</a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="topic-pager">
+    <a href="tema-1.html" class="pager-link">
+      <span class="pager-label">← Tema anterior</span>
+      Introducción a la Programación de Software
+    </a>
+    <a href="tema-3.html" class="pager-link text-end">
+      <span class="pager-label">Siguiente tema →</span>
+      Definición del Proyecto y Fundamentos de Software
+    </a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between gap-3">
+      <div>
+        <div class="footer-brand">Diseño de Aplicaciones</div>
+        <div>Material educativo de acceso abierto para estudiantes de desarrollo de software.</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="tema-1.html">Temas</a>
+        <a href="tema-7.html">Casos de negocio</a>
+      </div>
+    </div>
+    <div class="footer-author">
+      <p class="footer-quote">
+        “Educar no es llenar sino encender.”
+        <cite>Jorge Wagensberg, profesor y físico español</cite>
+      </p>
+      <div class="footer-signature">Profe Daniel Moraj · Medellín, 2026</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
