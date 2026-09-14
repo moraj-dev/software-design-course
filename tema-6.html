@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tema 6 · Repositorios Git y GitHub</title>
-<meta name="description" content="Gestión y control de versiones del código fuente: repositorios, commits, ramas, Gitflow y trabajo colaborativo hasta un Pull Request con un equipo de tres desarrolladores.">
+<meta name="description" content="Gestión y control de versiones del código fuente mediante repositorios, commits, ramas y trabajo colaborativo.">
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/icons/bootstrap-icons.min.css">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
@@ -15,7 +15,7 @@
 <nav class="navbar navbar-expand-lg navbar-course fixed-top">
   <div class="container">
     <a class="navbar-brand" href="index.html"><span class="brand-mark">DA</span>Diseño de Aplicaciones</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú de navegación">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="nav">
@@ -27,7 +27,6 @@
         <li class="nav-item"><a class="nav-link" href="tema-4.html">4. Requerimientos</a></li>
         <li class="nav-item"><a class="nav-link" href="tema-5.html">5. Modelado</a></li>
         <li class="nav-item"><a class="nav-link" href="tema-6.html">6. Git/GitHub</a></li>
-        <li class="nav-item"><a class="nav-link" href="tema-7.html">7. Negocios</a></li>
       </ul>
     </div>
   </div>
@@ -35,19 +34,17 @@
 
 <header class="topic-hero" style="padding-top:7.5rem;">
   <div class="container">
-    <span class="topic-num">Tema 06 / 07</span>
+    <span class="topic-num">Tema 06 / 06</span>
     <h1>Repositorios Git y GitHub</h1>
     <p class="hero-desc">
-      El último paso técnico de este curso: llevar tu proyecto a un repositorio con
-      control de versiones y aprender a trabajar en equipo sobre el mismo código.
-      Verás qué es Git, en qué se diferencia de GitHub, cómo profundizar en repositorios,
-      remotos y forks, cómo organizar ramas con Gitflow, y cómo colaborar con otras
-      personas hasta fusionar un Pull Request.
+      El último paso de este curso: llevar tu proyecto a un repositorio con control de
+      versiones. Aprenderás qué es Git, en qué se diferencia de GitHub, y cómo trabajar
+      con commits y ramas de forma colaborativa.
     </p>
     <div class="topic-meta">
-      <div class="meta-item"><strong>Duración estimada</strong>4 horas</div>
+      <div class="meta-item"><strong>Duración estimada</strong>3 horas</div>
       <div class="meta-item"><strong>Nivel</strong>Introductorio–intermedio</div>
-      <div class="meta-item"><strong>Entregable</strong>Repositorio propio en GitHub con Pull Request fusionado</div>
+      <div class="meta-item"><strong>Entregable</strong>Repositorio propio en GitHub</div>
     </div>
   </div>
 </header>
@@ -57,50 +54,43 @@
     <div class="col-lg-9">
 
       <section class="section" id="objetivos">
-        <span class="section-kicker"><i class="bi bi-flag"></i>Objetivos de aprendizaje</span>
+        <span class="section-kicker">Objetivos de aprendizaje</span>
         <h2>Qué vas a lograr en este tema</h2>
         <ul class="check-list">
           <li data-toggle-check><i class="bi bi-circle"></i> Explicar qué es el control de versiones y por qué es indispensable en desarrollo de software.</li>
           <li data-toggle-check><i class="bi bi-circle"></i> Diferenciar Git (la herramienta) de GitHub (la plataforma en la nube).</li>
-          <li data-toggle-check><i class="bi bi-circle"></i> Distinguir repositorio local, remoto, clon y fork, y configurar colaboradores.</li>
-          <li data-toggle-check><i class="bi bi-circle"></i> Aplicar el modelo de ramas Gitflow en un proyecto de equipo.</li>
-          <li data-toggle-check><i class="bi bi-circle"></i> Colaborar con otras personas desarrolladoras hasta fusionar un Pull Request revisado.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Crear un repositorio, realizar commits y trabajar con ramas.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Publicar tu proyecto en GitHub y describirlo con un README.</li>
         </ul>
       </section>
 
       <section class="section" id="definiciones">
-        <span class="section-kicker"><i class="bi bi-journal-bookmark"></i>Definiciones clave</span>
+        <span class="section-kicker">Definiciones clave</span>
         <h2>Vocabulario base del tema</h2>
         <div class="row g-3">
           <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-clock-history"></i>Control de versiones</span><p>Sistema que registra los cambios realizados sobre un conjunto de archivos a lo largo del tiempo, permitiendo volver a versiones anteriores cuando sea necesario.</p></div>
+            <div class="def-card"><span class="def-term">Control de versiones</span><p>Sistema que registra los cambios realizados sobre un conjunto de archivos a lo largo del tiempo, permitiendo volver a versiones anteriores cuando sea necesario.</p></div>
           </div>
           <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-git"></i>Git</span><p>Sistema de control de versiones distribuido, instalado localmente, que registra el historial de cambios de un proyecto.</p></div>
+            <div class="def-card"><span class="def-term">Git</span><p>Sistema de control de versiones distribuido, instalado localmente, que registra el historial de cambios de un proyecto.</p></div>
           </div>
           <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-github"></i>GitHub</span><p>Plataforma en la nube que aloja repositorios Git y añade herramientas de colaboración: issues, Pull Requests y revisión de código.</p></div>
+            <div class="def-card"><span class="def-term">GitHub</span><p>Plataforma en la nube que aloja repositorios Git y añade herramientas de colaboración: issues, pull requests y revisión de código.</p></div>
           </div>
           <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-folder2-open"></i>Repositorio</span><p>Carpeta de un proyecto cuyo historial de cambios es gestionado por Git. Puede ser <strong>local</strong> (en tu computador) o <strong>remoto</strong> (alojado en GitHub).</p></div>
+            <div class="def-card"><span class="def-term">Repositorio</span><p>Carpeta de un proyecto cuyo historial de cambios es gestionado por Git.</p></div>
           </div>
           <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-camera"></i>Commit</span><p>Registro puntual de un conjunto de cambios guardados en el historial del repositorio, acompañado de un mensaje descriptivo.</p></div>
+            <div class="def-card"><span class="def-term">Commit</span><p>Registro puntual de un conjunto de cambios guardados en el historial del repositorio, acompañado de un mensaje descriptivo.</p></div>
           </div>
           <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-signpost-split"></i>Rama (branch)</span><p>Línea de desarrollo independiente dentro de un repositorio, que permite trabajar en una funcionalidad sin afectar el código principal.</p></div>
-          </div>
-          <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-arrow-repeat"></i><abbr class="acronym" title="Pull Request — nombre original en inglés, sin traducción oficial estandarizada">Pull Request</abbr> (PR)</span><p><span class="gloss-en">Del inglés "solicitud de incorporación de cambios"</span>: propuesta formal para fusionar los cambios de una rama a otra, abierta en GitHub para que el equipo la revise antes de aceptarla.</p></div>
-          </div>
-          <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-diagram-3"></i>Gitflow</span><p>Modelo de ramas propuesto por Vincent Driessen en 2010 que organiza el trabajo en equipo en ramas con propósitos claros: <span class="kbd-tag">main</span>, <span class="kbd-tag">develop</span>, <span class="kbd-tag">feature/*</span>, <span class="kbd-tag">release/*</span> y <span class="kbd-tag">hotfix/*</span>.</p></div>
+            <div class="def-card"><span class="def-term">Rama (branch)</span><p>Línea de desarrollo independiente dentro de un repositorio, que permite trabajar en una funcionalidad sin afectar el código principal.</p></div>
           </div>
         </div>
       </section>
 
       <section class="section section-alt" id="flujo-basico">
-        <span class="section-kicker"><i class="bi bi-arrow-left-right"></i>Contenido</span>
+        <span class="section-kicker">Contenido</span>
         <h2>El flujo básico de trabajo con Git</h2>
         <div class="panel mt-1" style="overflow-x:auto;">
           <svg viewBox="0 0 720 160" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:720px; display:block; margin:0 auto;">
@@ -142,153 +132,8 @@
         </p>
       </section>
 
-      <!-- REPOSITORIOS EN PROFUNDIDAD -->
-      <section class="section" id="repos-profundidad">
-        <span class="section-kicker"><i class="bi bi-folder2-open"></i>Contenido</span>
-        <h2>Repositorios en profundidad: local, remoto, clon y fork</h2>
-        <p class="text-muted-soft container-text">
-          Antes de trabajar en equipo hace falta entender bien qué tipo de repositorio
-          se está usando en cada momento. Es la confusión más común de quien empieza con
-          Git: no todos los repositorios "viven" en el mismo lugar ni cumplen el mismo rol.
-        </p>
-
-        <div class="row g-3 mt-2">
-          <div class="col-md-6">
-            <div class="panel panel-accent h-100">
-              <h3 class="h6"><i class="bi bi-laptop"></i>Repositorio local</h3>
-              <p class="text-muted-soft small mb-0">Vive en tu computador. Se crea con <span class="kbd-tag">git init</span> o descargando uno remoto con <span class="kbd-tag">git clone</span>. Ahí ocurren tus commits antes de compartirlos.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-accent h-100">
-              <h3 class="h6"><i class="bi bi-cloud"></i>Repositorio remoto</h3>
-              <p class="text-muted-soft small mb-0">Vive en un servidor (GitHub, GitLab, Bitbucket). Es el punto de encuentro del equipo: ahí se publican y comparten los cambios de todas las personas colaboradoras.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-warm h-100">
-              <h3 class="h6"><i class="bi bi-download"></i>Clonar (clone)</h3>
-              <p class="text-muted-soft small mb-0">Descarga una copia local completa de un repositorio remoto, incluido su historial. Se usa cuando ya tienes permiso de colaborador sobre ese repositorio.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-warm h-100">
-              <h3 class="h6"><i class="bi bi-bezier2"></i>Bifurcar (fork)</h3>
-              <p class="text-muted-soft small mb-0">Crea tu propia copia independiente de un repositorio ajeno, dentro de tu cuenta de GitHub. Se usa para proponer cambios a proyectos donde no tienes permiso de escritura directo.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="table-responsive mt-3">
-          <table class="table table-req mb-0">
-            <thead><tr><th>Concepto</th><th>Qué es</th><th>Cuándo se usa</th></tr></thead>
-            <tbody>
-              <tr><td class="strong-cell"><span class="kbd-tag">origin</span></td><td>Nombre por defecto que Git da al repositorio remoto del que clonaste o al que publicas.</td><td>Casi siempre: es tu remoto principal de trabajo en equipo.</td></tr>
-              <tr><td class="strong-cell"><span class="kbd-tag">upstream</span></td><td>Nombre habitual del repositorio remoto <em>original</em>, cuando tu repositorio es un fork de otro.</td><td>Contribuciones a proyectos de código abierto que no son tuyos.</td></tr>
-              <tr><td class="strong-cell">README.md</td><td>Archivo en la raíz del repositorio que explica de qué trata el proyecto, cómo instalarlo y cómo usarlo.</td><td>Siempre: es lo primero que una persona ve al abrir el repositorio.</td></tr>
-              <tr><td class="strong-cell">.gitignore</td><td>Archivo que le indica a Git qué carpetas o archivos <strong>no</strong> debe versionar (dependencias, claves, archivos temporales).</td><td>Desde el primer commit, para no subir archivos que no corresponden.</td></tr>
-              <tr><td class="strong-cell">Visibilidad</td><td>Un repositorio puede ser <strong>público</strong> (cualquiera lo ve) o <strong>privado</strong> (solo colaboradores invitados).</td><td>Se decide al crear el repositorio; se puede cambiar después en Settings.</td></tr>
-              <tr><td class="strong-cell">Colaboradores</td><td>Personas con permiso explícito de lectura/escritura sobre un repositorio privado, agregadas desde Settings → Collaborators.</td><td>Al iniciar un proyecto de equipo, antes de que nadie más pueda hacer push.</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- GITFLOW -->
-      <section class="section section-alt" id="gitflow">
-        <span class="section-kicker"><i class="bi bi-diagram-3"></i>Contenido</span>
-        <h2>Gitflow: un modelo de ramas para trabajar en equipo</h2>
-        <p class="text-muted-soft container-text">
-          Cuando varias personas programan sobre el mismo repositorio, trabajar todas
-          directamente sobre una única rama termina en conflictos constantes. Gitflow
-          resuelve esto asignando un propósito fijo a cada tipo de rama.
-        </p>
-
-        <div class="table-responsive mt-3">
-          <table class="table table-req">
-            <thead><tr><th>Rama</th><th>Propósito</th><th>Nace de</th><th>Se fusiona en</th></tr></thead>
-            <tbody>
-              <tr><td class="strong-cell"><span class="kbd-tag">main</span></td><td>Código en producción, siempre estable y desplegable.</td><td>—</td><td>—</td></tr>
-              <tr><td class="strong-cell"><span class="kbd-tag">develop</span></td><td>Integración de todas las funcionalidades ya terminadas, en camino hacia la próxima versión.</td><td><span class="kbd-tag">main</span></td><td><span class="kbd-tag">main</span> (vía <span class="kbd-tag">release/*</span>)</td></tr>
-              <tr><td class="strong-cell"><span class="kbd-tag">feature/*</span></td><td>Una funcionalidad puntual que un solo desarrollador (o pareja) construye de forma aislada.</td><td><span class="kbd-tag">develop</span></td><td><span class="kbd-tag">develop</span> (vía Pull Request)</td></tr>
-              <tr><td class="strong-cell"><span class="kbd-tag">release/*</span></td><td>Últimos ajustes antes de publicar una versión: número de versión, changelog, pruebas finales.</td><td><span class="kbd-tag">develop</span></td><td><span class="kbd-tag">main</span> y de vuelta a <span class="kbd-tag">develop</span></td></tr>
-              <tr><td class="strong-cell"><span class="kbd-tag">hotfix/*</span></td><td>Corrección urgente de un error detectado ya en producción.</td><td><span class="kbd-tag">main</span></td><td><span class="kbd-tag">main</span> y de vuelta a <span class="kbd-tag">develop</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="panel mt-4" style="overflow-x:auto;">
-          <svg viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de ramas de Gitflow" style="width:100%; max-width:900px; display:block; margin:0 auto; min-width:640px;">
-            <g font-family="JetBrains Mono, monospace" font-size="11" fill="#a8afb8">
-              <text x="20" y="34">main</text>
-              <text x="20" y="104">release/1.0.0</text>
-              <text x="20" y="174">develop</text>
-              <text x="20" y="244">feature/*</text>
-              <text x="20" y="294">hotfix/*</text>
-            </g>
-            <!-- líneas base de cada rama -->
-            <g stroke-width="2.4" fill="none">
-              <line x1="140" y1="28" x2="860" y2="28" stroke="#8fb2c4"/>
-              <line x1="500" y1="98" x2="640" y2="98" stroke="#93bda1"/>
-              <line x1="140" y1="168" x2="800" y2="168" stroke="#c9a97e"/>
-              <line x1="220" y1="238" x2="420" y2="238" stroke="#7d848d"/>
-              <line x1="480" y1="238" x2="700" y2="238" stroke="#7d848d"/>
-              <line x1="700" y1="288" x2="780" y2="288" stroke="#e28b8b"/>
-            </g>
-            <!-- puntos de commit -->
-            <g fill="#e8eaed">
-              <circle cx="140" cy="28" r="4"/>
-              <circle cx="640" cy="28" r="4"/>
-              <circle cx="860" cy="28" r="4"/>
-              <circle cx="140" cy="168" r="4"/>
-              <circle cx="220" cy="168" r="4"/>
-              <circle cx="480" cy="168" r="4"/>
-              <circle cx="500" cy="168" r="4"/>
-              <circle cx="640" cy="168" r="4"/>
-              <circle cx="700" cy="168" r="4"/>
-              <circle cx="800" cy="168" r="4"/>
-              <circle cx="220" cy="238" r="4"/>
-              <circle cx="420" cy="238" r="4"/>
-              <circle cx="480" cy="238" r="4"/>
-              <circle cx="700" cy="238" r="4"/>
-              <circle cx="700" cy="288" r="4"/>
-              <circle cx="780" cy="288" r="4"/>
-            </g>
-            <!-- conexiones entre ramas -->
-            <g stroke="#565c63" stroke-width="1.2" fill="none" stroke-dasharray="3 3">
-              <path d="M140,168 L140,28"/>
-              <path d="M220,168 L220,238"/>
-              <path d="M420,238 L480,168"/>
-              <path d="M500,168 L500,98"/>
-              <path d="M640,98 L640,28"/>
-              <path d="M640,98 L640,168"/>
-              <path d="M700,168 L700,238"/>
-              <path d="M700,238 L700,288"/>
-              <path d="M780,288 L780,168"/>
-              <path d="M780,168 L800,168"/>
-              <path d="M780,28 L860,28"/>
-              <path d="M800,168 L860,28"/>
-            </g>
-            <g font-family="Inter, sans-serif" font-size="10.5" fill="#7d848d">
-              <text x="150" y="185">develop nace de main</text>
-              <text x="230" y="255">feature/A</text>
-              <text x="490" y="255">feature/B</text>
-              <text x="440" y="90">release/1.0.0</text>
-              <text x="710" y="305">hotfix/bug-critico</text>
-            </g>
-          </svg>
-        </div>
-        <p class="text-muted-soft container-text mt-3">
-          En proyectos pequeños o de curso, muchos equipos usan una versión simplificada
-          de Gitflow: solo <span class="kbd-tag">main</span>, <span class="kbd-tag">develop</span>
-          y ramas <span class="kbd-tag">feature/*</span>, dejando <span class="kbd-tag">release/*</span>
-          y <span class="kbd-tag">hotfix/*</span> para cuando el proyecto realmente llega a producción.
-          El taller de este tema usa esa versión simplificada como punto de partida.
-        </p>
-      </section>
-
       <section class="section" id="comandos">
-        <span class="section-kicker"><i class="bi bi-terminal"></i>Contenido</span>
+        <span class="section-kicker">Contenido</span>
         <h2>Comandos esenciales</h2>
         <div class="table-responsive">
           <table class="table table-req">
@@ -300,65 +145,16 @@
               <tr><td class="strong-cell"><span class="kbd-tag">git add &lt;archivo&gt;</span></td><td>Prepara un archivo para ser incluido en el próximo commit.</td></tr>
               <tr><td class="strong-cell"><span class="kbd-tag">git commit -m "mensaje"</span></td><td>Guarda los cambios preparados con un mensaje descriptivo.</td></tr>
               <tr><td class="strong-cell"><span class="kbd-tag">git branch &lt;nombre&gt;</span></td><td>Crea una nueva rama de trabajo.</td></tr>
-              <tr><td class="strong-cell"><span class="kbd-tag">git checkout -b &lt;rama&gt;</span></td><td>Crea una rama nueva y cambia a ella en un solo paso.</td></tr>
+              <tr><td class="strong-cell"><span class="kbd-tag">git checkout &lt;rama&gt;</span></td><td>Cambia a la rama indicada.</td></tr>
               <tr><td class="strong-cell"><span class="kbd-tag">git merge &lt;rama&gt;</span></td><td>Combina los cambios de una rama con la rama actual.</td></tr>
               <tr><td class="strong-cell"><span class="kbd-tag">git push</span> / <span class="kbd-tag">git pull</span></td><td>Envía o trae cambios entre el repositorio local y el remoto.</td></tr>
-              <tr><td class="strong-cell"><span class="kbd-tag">git fetch</span></td><td>Descarga los cambios del remoto sin fusionarlos todavía, para revisarlos primero.</td></tr>
-              <tr><td class="strong-cell"><span class="kbd-tag">git remote -v</span></td><td>Lista los repositorios remotos configurados (por ejemplo, <span class="kbd-tag">origin</span>).</td></tr>
-              <tr><td class="strong-cell"><span class="kbd-tag">git log --oneline --graph</span></td><td>Muestra el historial de commits de forma compacta y con ramas visuales.</td></tr>
-              <tr><td class="strong-cell"><span class="kbd-tag">git diff</span></td><td>Muestra línea por línea los cambios que aún no se han preparado con <span class="kbd-tag">add</span>.</td></tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <!-- TRABAJO COLABORATIVO Y PULL REQUESTS -->
-      <section class="section section-alt" id="trabajo-colaborativo">
-        <span class="section-kicker"><i class="bi bi-people-fill"></i>Contenido</span>
-        <h2>Trabajo colaborativo: de la rama al Pull Request</h2>
-        <p class="text-muted-soft container-text">
-          Un Pull Request no es solo un botón de "fusionar": es el punto donde el equipo
-          revisa el trabajo de una persona antes de que se vuelva parte del código
-          compartido. Es, en la práctica, la actividad de colaboración más frecuente en
-          cualquier equipo de desarrollo real.
-        </p>
-        <div class="row g-3 mt-2">
-          <div class="col-md-6">
-            <div class="panel panel-accent h-100">
-              <h3 class="h6"><i class="bi bi-1-circle"></i>Publicar la rama</h3>
-              <p class="text-muted-soft small mb-0">Con <span class="kbd-tag">git push -u origin feature/mi-rama</span>, la rama local queda visible en GitHub para el resto del equipo.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-accent h-100">
-              <h3 class="h6"><i class="bi bi-2-circle"></i>Abrir el Pull Request</h3>
-              <p class="text-muted-soft small mb-0">Desde GitHub, se propone fusionar <span class="kbd-tag">feature/mi-rama</span> hacia <span class="kbd-tag">develop</span>, con una descripción clara de qué cambió y por qué.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-warm h-100">
-              <h3 class="h6"><i class="bi bi-3-circle"></i>Revisión de código</h3>
-              <p class="text-muted-soft small mb-0">Otras personas del equipo leen el código (<em>code review</em>), dejan comentarios línea por línea y solicitan cambios si algo no está claro o tiene errores.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-warm h-100">
-              <h3 class="h6"><i class="bi bi-4-circle"></i>Aprobar y fusionar</h3>
-              <p class="text-muted-soft small mb-0">Cuando el PR es aprobado ("Approve"), se fusiona a <span class="kbd-tag">develop</span> y la rama <span class="kbd-tag">feature/*</span> se elimina: ya cumplió su propósito.</p>
-            </div>
-          </div>
-        </div>
-        <p class="text-muted-soft container-text mt-3">
-          Cuando dos personas modifican las mismas líneas de un archivo, aparece un
-          <strong>conflicto de fusión</strong>: Git no puede decidir solo cuál cambio
-          conservar y marca el archivo para que una persona lo resuelva manualmente antes
-          de continuar. No es un error grave, es normal en el trabajo en equipo — el
-          taller de esta página lo practica a propósito.
-        </p>
-      </section>
-
-      <section class="section" id="videos">
-        <span class="section-kicker"><i class="bi bi-play-btn"></i>Video</span>
+      <section class="section section-alt" id="videos">
+        <span class="section-kicker">Video</span>
         <h2>Para ver antes de continuar</h2>
         <div class="row g-4">
           <div class="col-md-6">
@@ -376,8 +172,8 @@
         </div>
       </section>
 
-      <section class="section section-alt" id="recursos">
-        <span class="section-kicker"><i class="bi bi-link-45deg"></i>Páginas de consulta</span>
+      <section class="section" id="recursos">
+        <span class="section-kicker">Páginas de consulta</span>
         <h2>Para profundizar</h2>
         <div class="row g-3">
           <div class="col-md-4">
@@ -389,172 +185,60 @@
           <div class="col-md-4">
             <a class="resource-link" href="https://docs.github.com/es" target="_blank" rel="noopener">
               <i class="bi bi-box-arrow-up-right"></i>
-              <div><h4>Documentación de GitHub</h4><p>Guías oficiales para crear repositorios, ramas y Pull Requests.</p></div>
+              <div><h4>Documentación de GitHub</h4><p>Guías oficiales para crear repositorios, ramas y pull requests.</p></div>
             </a>
           </div>
           <div class="col-md-4">
-            <a class="resource-link" href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" rel="noopener">
+            <a class="resource-link" href="https://github.com/mouredev/hello-git" target="_blank" rel="noopener">
               <i class="bi bi-box-arrow-up-right"></i>
-              <div><h4>Artículo original de Gitflow</h4><p>El post de Vincent Driessen donde se propuso el modelo Gitflow, en inglés.</p></div>
+              <div><h4>Curso "hello-git"</h4><p>Curso abierto en GitHub para practicar Git y GitHub desde cero, paso a paso.</p></div>
             </a>
           </div>
         </div>
       </section>
 
-      <!-- TALLER PRÁCTICO: 3 DESARROLLADORES -->
       <section class="section section-alt" id="taller">
-        <span class="section-kicker"><i class="bi bi-tools"></i>Taller práctico</span>
-        <h2>Taller de equipo: de la idea al Pull Request con 3 desarrolladores</h2>
-        <p class="text-muted-soft container-text">
-          Este taller se resuelve en un equipo de <strong>exactamente tres personas</strong>,
-          simulando roles reales: <span class="role-tag dev-a">Dev A</span> hace de líder
-          técnico y crea el repositorio, <span class="role-tag dev-b">Dev B</span> y
-          <span class="role-tag dev-c">Dev C</span> se unen como colaboradores. Construirán,
-          sobre el <em>Sistema de reserva de laboratorios</em> usado en temas anteriores,
-          tres funcionalidades en paralelo usando Gitflow simplificado, hasta fusionar un
-          Pull Request revisado por el equipo. La guía descargable en PDF incluye el mismo
-          recorrido con más detalle, capturas de referencia y una rúbrica de evaluación.
-        </p>
-
-        <div class="workshop-box mt-3">
+        <span class="section-kicker">Taller práctico</span>
+        <h2>Publica tu proyecto en GitHub</h2>
+        <div class="workshop-box">
           <div class="workshop-head">
-            <div><span class="badge-level">Equipo de 3 personas · 3–4 horas</span></div>
+            <div><span class="badge-level">Individual o en equipo · 90 min</span></div>
             <a href="assets/pdf/taller-tema6.pdf" class="btn btn-accent btn-sm" download>
-              <i class="bi bi-file-earmark-arrow-down"></i> Descargar guía completa en PDF
+              <i class="bi bi-file-earmark-arrow-down"></i> Descargar guía en PDF
             </a>
           </div>
-          <div style="padding: 1.5rem;">
-
-            <div class="step-block">
-              <span class="step-num">Paso 1</span>
-              <h3><i class="bi bi-person-plus"></i> Preparación del equipo y del repositorio</h3>
-              <p><span class="role-tag dev-a">Dev A</span> crea en GitHub un repositorio privado llamado <code>reserva-laboratorios</code>, inicializado con README, licencia y un <code>.gitignore</code>. Luego agrega a <span class="role-tag dev-b">Dev B</span> y <span class="role-tag dev-c">Dev C</span> como colaboradores desde <em>Settings → Collaborators</em>.</p>
-              <p>Los tres instalan Git, configuran su identidad y clonan el repositorio:</p>
-              <pre>git config --global user.name "Tu nombre"
-git config --global user.email "tu@correo.com"
-git clone https://github.com/dev-a/reserva-laboratorios.git</pre>
-            </div>
-
-            <div class="step-block">
-              <span class="step-num">Paso 2</span>
-              <h3><i class="bi bi-signpost-split"></i> Crear la rama <code>develop</code></h3>
-              <p><span class="role-tag dev-a">Dev A</span> crea la rama de integración y la publica; los otros dos la descargan.</p>
-              <pre>git checkout -b develop
-git push -u origin develop</pre>
-              <p>Dev B y Dev C: <code>git fetch origin</code> seguido de <code>git checkout develop</code>.</p>
-            </div>
-
-            <div class="step-block">
-              <span class="step-num">Paso 3</span>
-              <h3><i class="bi bi-diagram-2"></i> Cada quien crea su rama <code>feature/*</code></h3>
-              <p>Desde <code>develop</code> actualizado, cada integrante crea su propia rama de trabajo:</p>
-              <pre>git checkout develop
-git pull origin develop
-git checkout -b feature/&lt;tu-funcionalidad&gt;</pre>
-              <ul>
-                <li><span class="role-tag dev-a">Dev A</span> → <code>feature/formulario-reserva</code></li>
-                <li><span class="role-tag dev-b">Dev B</span> → <code>feature/listado-horarios</code></li>
-                <li><span class="role-tag dev-c">Dev C</span> → <code>feature/autenticacion-usuarios</code></li>
-              </ul>
-            </div>
-
-            <div class="step-block">
-              <span class="step-num">Paso 4</span>
-              <h3><i class="bi bi-code-square"></i> Trabajo individual con commits atómicos</h3>
-              <p>Cada persona construye su parte (puede ser HTML/CSS estático si aún no ven backend) y guarda avances en commits pequeños y descriptivos, no uno solo gigante al final:</p>
-              <pre>git add .
-git commit -m "Agrega validación de fecha en formulario de reserva"</pre>
-              <p>Mientras tanto, revisan si <code>develop</code> tiene cambios nuevos del equipo y los integran pronto para evitar divergencias grandes:</p>
-              <pre>git fetch origin
-git merge origin/develop</pre>
-            </div>
-
-            <div class="step-block">
-              <span class="step-num">Paso 5</span>
-              <h3><i class="bi bi-cloud-upload"></i> Publicar la rama y abrir el Pull Request</h3>
-              <p>Cuando su funcionalidad está lista para revisión, cada quien publica su rama y abre un PR <strong>hacia <code>develop</code></strong> (no hacia <code>main</code>):</p>
-              <pre>git push -u origin feature/&lt;tu-funcionalidad&gt;</pre>
-              <p>En GitHub: botón <em>Compare & pull request</em> → describir qué se hizo, por qué, y cómo probarlo → asignar como revisores a los otros dos integrantes.</p>
-            </div>
-
-            <div class="step-block">
-              <span class="step-num">Paso 6</span>
-              <h3><i class="bi bi-chat-square-text"></i> Revisión de código cruzada</h3>
-              <p>Cada integrante revisa <strong>al menos un</strong> Pull Request de un compañero: lee el código, deja mínimo dos comentarios (una sugerencia y una pregunta) y decide entre <em>Approve</em> o <em>Request changes</em>. Quien recibe comentarios responde o ajusta su código y vuelve a subir cambios a la misma rama.</p>
-            </div>
-
-            <div class="step-block">
-              <span class="step-num">Paso 7</span>
-              <h3><i class="bi bi-exclamation-triangle"></i> Provocar y resolver un conflicto (a propósito)</h3>
-              <p>Para practicar lo inevitable: dos integrantes editan la misma línea de <code>README.md</code> en ramas distintas y ambos intentan fusionar a <code>develop</code>. Quien fusiona de segundo verá un conflicto. Se resuelve así:</p>
-              <pre>git checkout develop
-git pull origin develop
-git merge feature/&lt;tu-funcionalidad&gt;
-# Git marca el archivo en conflicto con &lt;&lt;&lt;&lt;&lt;&lt;&lt; ======= &gt;&gt;&gt;&gt;&gt;&gt;&gt;
-# edita el archivo, elige qué contenido conservar, guarda
-git add README.md
-git commit -m "Resuelve conflicto de fusión en README"</pre>
-            </div>
-
-            <div class="step-block">
-              <span class="step-num">Paso 8</span>
-              <h3><i class="bi bi-check2-circle"></i> Fusionar los tres Pull Requests</h3>
-              <p>Con las aprobaciones del equipo, cada PR se fusiona a <code>develop</code> desde GitHub (botón <em>Merge pull request</em>) y se elimina la rama <code>feature/*</code> ya fusionada. Todo el equipo actualiza su copia local:</p>
-              <pre>git checkout develop
-git pull origin develop</pre>
-            </div>
-
-            <div class="step-block">
-              <span class="step-num">Paso 9</span>
-              <h3><i class="bi bi-rocket-takeoff"></i> Preparar una versión con <code>release/*</code></h3>
-              <p>Con las tres funcionalidades integradas en <code>develop</code>, <span class="role-tag dev-a">Dev A</span> crea una rama de versión, ajusta detalles finales (por ejemplo, la versión en el README) y abre el último Pull Request, esta vez hacia <code>main</code>:</p>
-              <pre>git checkout develop
-git checkout -b release/1.0.0
-git push -u origin release/1.0.0
-# Pull Request: release/1.0.0 → main</pre>
-              <p>Al fusionar a <code>main</code>, se marca la versión con una etiqueta y se sincroniza de vuelta <code>develop</code>:</p>
-              <pre>git checkout main
-git pull origin main
-git tag -a v1.0.0 -m "Primera versión del sistema de reserva"
-git push origin v1.0.0
-git checkout develop
-git merge main</pre>
-            </div>
-
-            <div class="step-block">
-              <span class="step-num">Paso 10</span>
-              <h3><i class="bi bi-clipboard-data"></i> Cierre del taller</h3>
-              <p>Como equipo, respondan por escrito: ¿cuántos Pull Requests abrieron?, ¿qué conflicto tuvieron que resolver y cómo?, ¿qué comentario de revisión les pareció más útil? Entreguen el enlace del repositorio con el historial de ramas y PRs visible.</p>
-            </div>
-
-          </div>
+          <ol class="workshop-steps">
+            <li><strong>Instala Git</strong> en tu computador y crea una cuenta gratuita en GitHub, si aún no la tienes.</li>
+            <li><strong>Crea un repositorio</strong> con el nombre de tu proyecto y un README breve que resuma la idea definida en el Tema 3.</li>
+            <li><strong>Inicializa Git localmente</strong> en la carpeta de tu proyecto y realiza tu primer commit.</li>
+            <li><strong>Crea una rama</strong> llamada <span class="kbd-tag">documentacion</span> y agrega en ella tus historias de usuario del Tema 4 y tus diagramas del Tema 5.</li>
+            <li><strong>Combina la rama</strong> con la rama principal usando <span class="kbd-tag">git merge</span>.</li>
+            <li><strong>Publica el repositorio</strong> en GitHub con <span class="kbd-tag">git push</span> y comparte el enlace con tu docente.</li>
+          </ol>
         </div>
       </section>
 
       <section class="section" id="autoevaluacion">
-        <span class="section-kicker"><i class="bi bi-check2-square"></i>Autoevaluación</span>
+        <span class="section-kicker">Autoevaluación</span>
         <h2>¿Quedó claro el tema?</h2>
         <ul class="check-list">
           <li data-toggle-check><i class="bi bi-circle"></i> Puedo explicar la diferencia entre Git y GitHub.</li>
-          <li data-toggle-check><i class="bi bi-circle"></i> Puedo diferenciar un repositorio local de uno remoto, y un clon de un fork.</li>
-          <li data-toggle-check><i class="bi bi-circle"></i> Puedo nombrar las cinco ramas de Gitflow y para qué sirve cada una.</li>
-          <li data-toggle-check><i class="bi bi-circle"></i> Puedo describir el ciclo completo de un Pull Request: publicar, abrir, revisar, aprobar y fusionar.</li>
-          <li data-toggle-check><i class="bi bi-circle"></i> Tengo mi proyecto publicado en GitHub con al menos un Pull Request fusionado en equipo.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Puedo describir qué ocurre en cada paso: <span class="kbd-tag">add</span>, <span class="kbd-tag">commit</span> y <span class="kbd-tag">push</span>.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Puedo explicar para qué sirve trabajar con ramas en un proyecto en equipo.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Tengo mi proyecto publicado en un repositorio de GitHub con un README.</li>
         </ul>
       </section>
 
       <section class="section section-alt" id="cierre">
-        <span class="section-kicker"><i class="bi bi-flag-fill"></i>Cierre del curso</span>
-        <h2>Has recorrido las seis etapas técnicas</h2>
+        <span class="section-kicker">Cierre del curso</span>
+        <h2>Has recorrido las seis etapas</h2>
         <p class="text-muted-soft container-text">
           Empezaste entendiendo la historia de la programación y terminas con tu propio
-          proyecto versionado, trabajado en equipo y fusionado en un repositorio
-          compartido. Ese recorrido —de la idea al código controlado y colaborativo— es,
-          en esencia, el ciclo de vida de cualquier aplicación de software real. El
-          Tema 7 te propone ahora ponerlo a prueba con casos de negocio reales.
+          proyecto versionado en un repositorio. Ese recorrido —de la idea al código
+          controlado y compartible— es, en esencia, el ciclo de vida de cualquier
+          aplicación de software real.
         </p>
-        <a href="tema-7.html" class="btn btn-accent mt-2">Ir a los Casos de Negocio →</a>
-        <a href="index.html" class="btn btn-outline-soft mt-2 ms-2">Volver al inicio del curso</a>
+        <a href="index.html" class="btn btn-outline-soft mt-2">Volver al inicio del curso</a>
       </section>
 
     </div>
@@ -565,10 +249,7 @@ git merge main</pre>
         <a href="#objetivos">Objetivos</a>
         <a href="#definiciones">Definiciones clave</a>
         <a href="#flujo-basico">Flujo básico de Git</a>
-        <a href="#repos-profundidad">Repositorios en profundidad</a>
-        <a href="#gitflow">Gitflow</a>
         <a href="#comandos">Comandos esenciales</a>
-        <a href="#trabajo-colaborativo">Trabajo colaborativo</a>
         <a href="#videos">Video</a>
         <a href="#recursos">Recursos de consulta</a>
         <a href="#taller">Taller práctico</a>
@@ -584,32 +265,22 @@ git merge main</pre>
       <span class="pager-label">← Tema anterior</span>
       Modelado y Diseño de Software
     </a>
-    <a href="tema-7.html" class="pager-link text-end">
-      <span class="pager-label">Siguiente tema →</span>
-      Casos de Negocio Empresariales
+    <a href="index.html" class="pager-link text-end">
+      <span class="pager-label">Fin del curso →</span>
+      Volver a la página de inicio
     </a>
   </div>
 </div>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="d-flex flex-wrap justify-content-between gap-3">
-      <div>
-        <div class="footer-brand">Diseño de Aplicaciones</div>
-        <div>Material educativo de acceso abierto para estudiantes de desarrollo de software.</div>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Inicio</a>
-        <a href="tema-1.html">Temas</a>
-        <a href="tema-7.html">Casos de negocio</a>
-      </div>
+  <div class="container d-flex flex-wrap justify-content-between gap-3">
+    <div>
+      <div style="color:var(--text-muted); font-family: var(--font-head); font-size:1.05rem;">Diseño de Aplicaciones</div>
+      <div>Material educativo de acceso abierto para estudiantes de desarrollo de software.</div>
     </div>
-    <div class="footer-author">
-      <p class="footer-quote">
-        “Educar no es llenar sino encender.”
-        <cite>Jorge Wagensberg, profesor y físico español</cite>
-      </p>
-      <div class="footer-signature">Profe Daniel Moraj · Medellín, 2026</div>
+    <div class="d-flex gap-4">
+      <a href="index.html">Inicio</a>
+      <a href="tema-1.html">Temas</a>
     </div>
   </div>
 </footer>

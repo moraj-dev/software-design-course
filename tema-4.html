@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tema 4 · Análisis de Requerimientos</title>
-<meta name="description" content="Requerimientos funcionales y no funcionales, usuarios, roles, historias de usuario, criterios de aceptación y el marco de trabajo Scrum.">
+<meta name="description" content="Requerimientos funcionales y no funcionales, usuarios, roles, historias de usuario y criterios de aceptación.">
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/icons/bootstrap-icons.min.css">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
@@ -15,7 +15,7 @@
 <nav class="navbar navbar-expand-lg navbar-course fixed-top">
   <div class="container">
     <a class="navbar-brand" href="index.html"><span class="brand-mark">DA</span>Diseño de Aplicaciones</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú de navegación">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="nav">
@@ -27,7 +27,6 @@
         <li class="nav-item"><a class="nav-link" href="tema-4.html">4. Requerimientos</a></li>
         <li class="nav-item"><a class="nav-link" href="tema-5.html">5. Modelado</a></li>
         <li class="nav-item"><a class="nav-link" href="tema-6.html">6. Git/GitHub</a></li>
-        <li class="nav-item"><a class="nav-link" href="tema-7.html">7. Negocios</a></li>
       </ul>
     </div>
   </div>
@@ -35,15 +34,15 @@
 
 <header class="topic-hero" style="padding-top:7.5rem;">
   <div class="container">
-    <span class="topic-num">Tema 04 / 07</span>
+    <span class="topic-num">Tema 04 / 06</span>
     <h1>Análisis de Requerimientos</h1>
     <p class="hero-desc">
       Convertir la idea de proyecto en requerimientos claros: qué debe hacer el sistema,
-      qué condiciones de calidad debe cumplir, quiénes lo usarán, cómo se sabrá que una
-      funcionalidad está realmente terminada y cómo Scrum organiza ese trabajo en el tiempo.
+      qué condiciones de calidad debe cumplir, quiénes lo usarán y cómo se sabrá que una
+      funcionalidad está realmente terminada.
     </p>
     <div class="topic-meta">
-      <div class="meta-item"><strong>Duración estimada</strong>3.5 horas</div>
+      <div class="meta-item"><strong>Duración estimada</strong>3 horas</div>
       <div class="meta-item"><strong>Nivel</strong>Intermedio</div>
       <div class="meta-item"><strong>Entregable</strong>Backlog inicial de historias de usuario</div>
     </div>
@@ -55,50 +54,43 @@
     <div class="col-lg-9">
 
       <section class="section" id="objetivos">
-        <span class="section-kicker"><i class="bi bi-flag"></i>Objetivos de aprendizaje</span>
+        <span class="section-kicker">Objetivos de aprendizaje</span>
         <h2>Qué vas a lograr en este tema</h2>
         <ul class="check-list">
           <li data-toggle-check><i class="bi bi-circle"></i> Diferenciar requerimientos funcionales de requerimientos no funcionales.</li>
           <li data-toggle-check><i class="bi bi-circle"></i> Identificar roles de usuario y sus necesidades específicas frente al sistema.</li>
           <li data-toggle-check><i class="bi bi-circle"></i> Redactar historias de usuario siguiendo un formato estándar.</li>
           <li data-toggle-check><i class="bi bi-circle"></i> Definir criterios de aceptación verificables para una historia de usuario.</li>
-          <li data-toggle-check><i class="bi bi-circle"></i> Explicar los roles, eventos y artefactos del marco de trabajo Scrum.</li>
         </ul>
       </section>
 
       <section class="section" id="definiciones">
-        <span class="section-kicker"><i class="bi bi-journal-bookmark"></i>Definiciones clave</span>
+        <span class="section-kicker">Definiciones clave</span>
         <h2>Vocabulario base del tema</h2>
         <div class="row g-3">
           <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-check-circle"></i>Requerimiento funcional</span><p>Describe una función específica que el sistema debe realizar: qué hace, ante qué acción y con qué resultado.</p></div>
+            <div class="def-card"><span class="def-term">Requerimiento funcional</span><p>Describe una función específica que el sistema debe realizar: qué hace, ante qué acción y con qué resultado.</p></div>
           </div>
           <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-shield-check"></i>Requerimiento no funcional</span><p>Describe una cualidad o restricción del sistema, como rendimiento, seguridad, usabilidad o disponibilidad, en lugar de una función puntual.</p></div>
+            <div class="def-card"><span class="def-term">Requerimiento no funcional</span><p>Describe una cualidad o restricción del sistema, como rendimiento, seguridad, usabilidad o disponibilidad, en lugar de una función puntual.</p></div>
           </div>
           <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-person-badge"></i>Rol de usuario</span><p>Categoría de persona que interactúa con el sistema desde un mismo conjunto de permisos y necesidades, por ejemplo "administrador" o "cliente".</p></div>
+            <div class="def-card"><span class="def-term">Rol de usuario</span><p>Categoría de persona que interactúa con el sistema desde un mismo conjunto de permisos y necesidades, por ejemplo "administrador" o "cliente".</p></div>
           </div>
           <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-card-text"></i>Historia de usuario</span><p>Descripción breve de una funcionalidad, contada desde la perspectiva de quien la necesita, típicamente en el formato "Como... quiero... para...".</p></div>
+            <div class="def-card"><span class="def-term">Historia de usuario</span><p>Descripción breve de una funcionalidad, contada desde la perspectiva de quien la necesita, típicamente en el formato "Como... quiero... para...".</p></div>
           </div>
           <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-list-check"></i>Criterio de aceptación</span><p>Condición concreta y verificable que debe cumplirse para considerar que una historia de usuario está correctamente implementada.</p></div>
+            <div class="def-card"><span class="def-term">Criterio de aceptación</span><p>Condición concreta y verificable que debe cumplirse para considerar que una historia de usuario está correctamente implementada.</p></div>
           </div>
           <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-stack"></i>Backlog</span><p>Lista priorizada de historias de usuario y tareas pendientes que el equipo va desarrollando a lo largo del proyecto.</p></div>
-          </div>
-          <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-arrow-repeat"></i>Scrum</span><p>Marco de trabajo ágil y liviano para desarrollar, entregar y mantener productos complejos mediante ciclos cortos de trabajo llamados sprints. <span class="gloss-en">El término no es una sigla: en inglés "scrum" nombra la formación de jugadores del rugby, usada como metáfora del trabajo cerrado en equipo.</span></p></div>
-          </div>
-          <div class="col-md-6">
-            <div class="def-card"><span class="def-term"><i class="bi bi-hourglass-split"></i>Sprint</span><p>Bloque de tiempo fijo (normalmente de una a cuatro semanas) durante el cual el equipo Scrum construye un incremento de producto utilizable.</p></div>
+            <div class="def-card"><span class="def-term">Backlog</span><p>Lista priorizada de historias de usuario y tareas pendientes que el equipo va desarrollando a lo largo del proyecto.</p></div>
           </div>
         </div>
       </section>
 
       <section class="section section-alt" id="funcionales-no-funcionales">
-        <span class="section-kicker"><i class="bi bi-list-check"></i>Contenido</span>
+        <span class="section-kicker">Contenido</span>
         <h2>Funcionales vs. no funcionales</h2>
         <div class="table-responsive">
           <table class="table table-req">
@@ -114,7 +106,7 @@
       </section>
 
       <section class="section" id="historias-usuario">
-        <span class="section-kicker"><i class="bi bi-card-text"></i>Contenido</span>
+        <span class="section-kicker">Contenido</span>
         <h2>Historias de usuario y criterios de aceptación</h2>
         <p class="text-muted-soft container-text">
           Una historia de usuario bien escrita cabe en pocas líneas y siempre deja claro
@@ -122,7 +114,7 @@
           función técnica.
         </p>
         <div class="panel panel-accent mt-3">
-          <span class="def-term"><i class="bi bi-file-earmark-text"></i>Plantilla estándar</span>
+          <span class="def-term">Plantilla estándar</span>
           <p class="mb-2" style="font-family:var(--font-mono); font-size:.95rem; color:var(--text);">
             Como &lt;rol de usuario&gt;, quiero &lt;acción o función&gt; para &lt;beneficio esperado&gt;.
           </p>
@@ -132,7 +124,7 @@
           </p>
         </div>
         <div class="panel panel-warm mt-3">
-          <span class="def-term"><i class="bi bi-list-check"></i>Criterios de aceptación de esa historia</span>
+          <span class="def-term">Criterios de aceptación de esa historia</span>
           <ul class="mb-0 text-muted-soft small">
             <li>El sistema muestra solo los turnos disponibles del laboratorio seleccionado.</li>
             <li>El estudiante no puede reservar dos turnos que se crucen en el mismo horario.</li>
@@ -141,110 +133,86 @@
         </div>
       </section>
 
-      <!-- SCRUM -->
-      <section class="section section-alt" id="scrum">
-        <span class="section-kicker"><i class="bi bi-arrow-repeat"></i>Contenido</span>
-        <h2>Scrum: cómo se organiza el trabajo sobre los requerimientos</h2>
+      <section class="section section-alt" id="vuca-agilismo">
+        <span class="section-kicker">Contenido</span>
+        <h2>Por qué el agilismo: el entorno VUCA</h2>
         <p class="text-muted-soft container-text">
-          Escribir historias de usuario no basta: alguien debe decidir en qué orden se
-          construyen y cómo el equipo se organiza para entregarlas. Scrum es el marco de
-          trabajo ágil más usado para eso. Se apoya en tres roles, cinco eventos y tres
-          artefactos, todos girando alrededor del backlog que ya conoces de esta página.
+          Los enfoques ágiles de análisis de requerimientos —como las historias de usuario
+          vistas arriba— no surgieron por moda, sino como respuesta a un tipo de entorno
+          en el que capturar "todos los requisitos" al inicio, de una vez y para siempre,
+          se volvió poco realista. Ese entorno se describe con el acrónimo <strong>VUCA</strong>.
         </p>
 
-        <h3 class="h6 mt-4 mb-3"><i class="bi bi-people"></i>Los tres roles de Scrum</h3>
-        <div class="row g-3">
-          <div class="col-md-4">
-            <div class="scrum-role">
-              <h3><i class="bi bi-person-workspace"></i> Product Owner</h3>
-              <p><span class="gloss-en">(ing. "dueño del producto")</span> Representa a la persona usuaria y al negocio: prioriza el backlog y decide qué se construye primero según el valor que genera.</p>
+        <div class="row g-3 mt-2">
+          <div class="col-md-6">
+            <div class="def-card">
+              <span class="def-term">V · Volatilidad (Volatility)</span>
+              <p>Los requisitos, la tecnología y el mercado cambian con velocidad y de forma poco predecible; lo que hoy es válido puede no serlo en unas semanas.</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="scrum-role">
-              <h3><i class="bi bi-signpost-split"></i> Scrum Master</h3>
-              <p><span class="gloss-en">(ing. "maestro de Scrum")</span> Facilita el proceso, elimina obstáculos del equipo y vela por que se respeten los eventos y valores de Scrum.</p>
+          <div class="col-md-6">
+            <div class="def-card">
+              <span class="def-term">U · Incertidumbre (Uncertainty)</span>
+              <p>No siempre es posible anticipar el efecto de una decisión ni conocer con certeza qué necesitará el usuario más adelante.</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="scrum-role">
-              <h3><i class="bi bi-people-fill"></i> Equipo de desarrollo</h3>
-              <p><span class="gloss-en">(ing. "Development Team")</span> Grupo autoorganizado que diseña, construye y prueba el incremento de producto en cada sprint.</p>
+          <div class="col-md-6">
+            <div class="def-card">
+              <span class="def-term">C · Complejidad (Complexity)</span>
+              <p>Los sistemas de software modernos integran muchas partes interdependientes (personas, procesos, tecnologías), lo que dificulta predecir el impacto total de un cambio.</p>
             </div>
           </div>
-        </div>
-
-        <h3 class="h6 mt-4 mb-3"><i class="bi bi-calendar-event"></i>Los cinco eventos de Scrum</h3>
-        <div class="table-responsive">
-          <table class="table table-req">
-            <thead><tr><th>Evento</th><th>Cuándo ocurre</th><th>Propósito</th></tr></thead>
-            <tbody>
-              <tr><td class="strong-cell">Sprint</td><td>Ciclo completo (1–4 semanas)</td><td>Contenedor de todos los demás eventos; produce un incremento utilizable.</td></tr>
-              <tr><td class="strong-cell">Sprint Planning</td><td>Inicio del sprint</td><td>El equipo decide qué historias del backlog entran al sprint y cómo se harán.</td></tr>
-              <tr><td class="strong-cell">Daily Scrum</td><td>Todos los días, ~15 min</td><td>Sincroniza al equipo: qué se hizo, qué sigue y qué obstáculos hay.</td></tr>
-              <tr><td class="strong-cell">Sprint Review</td><td>Cierre del sprint</td><td>Se muestra el incremento construido a los interesados y se recoge retroalimentación.</td></tr>
-              <tr><td class="strong-cell">Sprint Retrospective</td><td>Después de la review</td><td>El equipo reflexiona sobre cómo trabajó y define mejoras para el próximo sprint.</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3 class="h6 mt-4 mb-3"><i class="bi bi-stack"></i>Los tres artefactos de Scrum</h3>
-        <div class="row g-3">
-          <div class="col-md-4">
-            <div class="panel panel-accent h-100">
-              <h3 class="h6"><i class="bi bi-list-ol"></i>Product Backlog</h3>
-              <p class="text-muted-soft small mb-0">Lista completa y priorizada de todo lo que el producto podría necesitar: es el mismo backlog de historias de usuario de esta página, vivo durante todo el proyecto.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="panel panel-accent h-100">
-              <h3 class="h6"><i class="bi bi-clipboard-check"></i>Sprint Backlog</h3>
-              <p class="text-muted-soft small mb-0">Subconjunto de historias del Product Backlog que el equipo se compromete a construir en el sprint actual, más el plan para lograrlo.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="panel panel-accent h-100">
-              <h3 class="h6"><i class="bi bi-box-seam"></i>Incremento</h3>
-              <p class="text-muted-soft small mb-0">Suma de todas las historias terminadas en el sprint, integradas y en condición de poder usarse o mostrarse.</p>
+          <div class="col-md-6">
+            <div class="def-card">
+              <span class="def-term">A · Ambigüedad (Ambiguity)</span>
+              <p>La información disponible puede interpretarse de más de una forma; el problema mismo, a veces, no está del todo claro al comenzar.</p>
             </div>
           </div>
         </div>
 
-        <div class="panel mt-4" style="overflow-x:auto;">
-          <svg viewBox="0 0 720 170" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:720px; display:block; margin:0 auto;" role="img" aria-label="Ciclo de un sprint en Scrum">
-            <defs>
-              <marker id="arrow4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                <path d="M0,0 L6,3 L0,6 Z" fill="#7d848d"/>
-              </marker>
-            </defs>
-            <g font-family="Inter, sans-serif" font-size="11.5" fill="#e8eaed">
-              <rect x="10" y="60" width="128" height="50" rx="5" fill="#2c3035" stroke="#8fb2c4"/>
-              <text x="74" y="89" text-anchor="middle">Sprint Planning</text>
-
-              <rect x="176" y="60" width="128" height="50" rx="5" fill="#2c3035" stroke="#8fb2c4"/>
-              <text x="240" y="82" text-anchor="middle">Sprint</text>
-              <text x="240" y="97" text-anchor="middle" font-size="10" fill="#a8afb8">(con Daily Scrum)</text>
-
-              <rect x="342" y="60" width="128" height="50" rx="5" fill="#2c3035" stroke="#c9a97e"/>
-              <text x="406" y="89" text-anchor="middle">Sprint Review</text>
-
-              <rect x="508" y="60" width="128" height="50" rx="5" fill="#2c3035" stroke="#93bda1"/>
-              <text x="572" y="82" text-anchor="middle">Sprint</text>
-              <text x="572" y="97" text-anchor="middle">Retrospective</text>
-            </g>
-            <g stroke="#7d848d" stroke-width="1.3" fill="none" marker-end="url(#arrow4)">
-              <path d="M138 85 H174"/>
-              <path d="M304 85 H340"/>
-              <path d="M470 85 H506"/>
-              <path d="M572 112 Q572 150 74 150 Q10 150 10 112 V110"/>
-            </g>
-            <text x="320" y="145" text-anchor="middle" fill="#a8afb8" font-family="JetBrains Mono, monospace" font-size="10">vuelve a empezar con el siguiente sprint</text>
-          </svg>
+        <div class="panel panel-accent mt-4">
+          <span class="def-term">Qué implica para el análisis de requerimientos</span>
+          <p class="text-muted-soft small mb-0">
+            En un entorno VUCA, un documento de requisitos cerrado y definitivo se vuelve
+            obsoleto rápido. Por eso el agilismo propone requerimientos vivos —como el
+            backlog de historias de usuario— que se revisan y ajustan en ciclos cortos,
+            en lugar de fijarse por completo antes de empezar a construir.
+          </p>
         </div>
       </section>
 
-      <section class="section" id="videos">
-        <span class="section-kicker"><i class="bi bi-play-btn"></i>Video</span>
+      <section class="section" id="doce-principios">
+        <span class="section-kicker">Contenido</span>
+        <h2>Los 12 principios del Manifiesto Ágil</h2>
+        <p class="text-muted-soft container-text">
+          Estos doce acuerdos, redactados junto con el Manifiesto Ágil en 2001, son la
+          base de por qué Scrum, Kanban y otras metodologías ágiles trabajan con
+          requerimientos flexibles en lugar de una especificación cerrada desde el inicio.
+        </p>
+        <div class="table-responsive mt-3">
+          <table class="table table-req">
+            <thead><tr><th style="width:3.5rem;">#</th><th>Principio</th></tr></thead>
+            <tbody>
+              <tr><td class="strong-cell">1</td><td>Satisfacer al cliente mediante la entrega temprana y continua de software con valor.</td></tr>
+              <tr><td class="strong-cell">2</td><td>Aceptar que los requisitos cambien, incluso en etapas tardías del desarrollo, dando así ventaja competitiva al cliente.</td></tr>
+              <tr><td class="strong-cell">3</td><td>Entregar con frecuencia software funcionando, en periodos cortos, con preferencia por el plazo más corto posible.</td></tr>
+              <tr><td class="strong-cell">4</td><td>Responsables de negocio y desarrolladores deben trabajar juntos de forma cotidiana durante todo el proyecto.</td></tr>
+              <tr><td class="strong-cell">5</td><td>Construir proyectos en torno a individuos motivados, dándoles el entorno y el apoyo que necesitan y confiando en ellos.</td></tr>
+              <tr><td class="strong-cell">6</td><td>La conversación cara a cara es el método más eficiente y efectivo de comunicar información dentro del equipo.</td></tr>
+              <tr><td class="strong-cell">7</td><td>El software funcionando es la principal medida de progreso.</td></tr>
+              <tr><td class="strong-cell">8</td><td>Los procesos ágiles promueven un desarrollo sostenible, con un ritmo de trabajo constante e indefinido.</td></tr>
+              <tr><td class="strong-cell">9</td><td>La atención continua a la excelencia técnica y al buen diseño mejora la agilidad.</td></tr>
+              <tr><td class="strong-cell">10</td><td>La simplicidad —maximizar la cantidad de trabajo no realizado— es esencial.</td></tr>
+              <tr><td class="strong-cell">11</td><td>Las mejores arquitecturas, requisitos y diseños emergen de equipos auto-organizados.</td></tr>
+              <tr><td class="strong-cell">12</td><td>A intervalos regulares, el equipo reflexiona sobre cómo ser más efectivo y ajusta su comportamiento en consecuencia.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-faint small mt-2 mb-0">Fuente: Manifiesto por el Desarrollo Ágil de Software, 2001 (agilemanifesto.org).</p>
+      </section>
+
+      <section class="section section-alt" id="videos">
+        <span class="section-kicker">Video</span>
         <h2>Para ver antes de continuar</h2>
         <div class="row g-4">
           <div class="col-md-6">
@@ -262,8 +230,8 @@
         </div>
       </section>
 
-      <section class="section section-alt" id="recursos">
-        <span class="section-kicker"><i class="bi bi-link-45deg"></i>Páginas de consulta</span>
+      <section class="section" id="recursos">
+        <span class="section-kicker">Páginas de consulta</span>
         <h2>Para profundizar</h2>
         <div class="row g-3">
           <div class="col-md-4">
@@ -279,20 +247,20 @@
             </a>
           </div>
           <div class="col-md-4">
-            <a class="resource-link" href="https://scrumguides.org/" target="_blank" rel="noopener">
+            <a class="resource-link" href="https://www.scrummanager.com/files/scrum_manager_historias_usuario.pdf" target="_blank" rel="noopener">
               <i class="bi bi-box-arrow-up-right"></i>
-              <div><h4>The Scrum Guide</h4><p>Guía oficial de Scrum de sus creadores, disponible en español, en formato PDF descargable.</p></div>
+              <div><h4>Guía Scrum Manager</h4><p>Documento extenso en español sobre cómo escribir y dividir historias de usuario.</p></div>
             </a>
           </div>
         </div>
       </section>
 
-      <section class="section" id="taller">
-        <span class="section-kicker"><i class="bi bi-tools"></i>Taller práctico</span>
+      <section class="section section-alt" id="taller">
+        <span class="section-kicker">Taller práctico</span>
         <h2>Backlog inicial de tu proyecto</h2>
         <div class="workshop-box">
           <div class="workshop-head">
-            <div><span class="badge-level">Individual o en equipo · 100 min</span></div>
+            <div><span class="badge-level">Individual o en equipo · 90 min</span></div>
             <a href="assets/pdf/taller-tema4.pdf" class="btn btn-accent btn-sm" download>
               <i class="bi bi-file-earmark-arrow-down"></i> Descargar guía en PDF
             </a>
@@ -303,20 +271,19 @@
             <li><strong>Redacta seis historias de usuario</strong>, al menos dos por cada rol, usando la plantilla "Como... quiero... para...".</li>
             <li><strong>Escribe entre dos y tres criterios de aceptación</strong> para cada historia.</li>
             <li><strong>Identifica tres requerimientos no funcionales</strong> relevantes para tu proyecto (rendimiento, seguridad, usabilidad u otro).</li>
-            <li><strong>Organiza todo en una tabla</strong> a modo de Product Backlog, y prioriza las tres historias que entrarían en un primer Sprint.</li>
-            <li><strong>Asigna un rol Scrum</strong> a cada integrante del equipo (Product Owner, Scrum Master, equipo de desarrollo) si trabajas en grupo.</li>
+            <li><strong>Organiza todo en una tabla</strong> a modo de backlog inicial.</li>
           </ol>
         </div>
       </section>
 
-      <section class="section section-alt" id="autoevaluacion">
-        <span class="section-kicker"><i class="bi bi-check2-square"></i>Autoevaluación</span>
+      <section class="section" id="autoevaluacion">
+        <span class="section-kicker">Autoevaluación</span>
         <h2>¿Quedó claro el tema?</h2>
         <ul class="check-list">
           <li data-toggle-check><i class="bi bi-circle"></i> Puedo dar un ejemplo de requerimiento funcional y uno no funcional para el mismo sistema.</li>
           <li data-toggle-check><i class="bi bi-circle"></i> Puedo escribir una historia de usuario completa con la plantilla "Como... quiero... para...".</li>
           <li data-toggle-check><i class="bi bi-circle"></i> Puedo definir criterios de aceptación verificables para una historia de usuario.</li>
-          <li data-toggle-check><i class="bi bi-circle"></i> Puedo nombrar los tres roles, los cinco eventos y los tres artefactos de Scrum.</li>
+          <li data-toggle-check><i class="bi bi-circle"></i> Puedo identificar al menos dos roles de usuario distintos en mi proyecto.</li>
         </ul>
       </section>
 
@@ -329,7 +296,8 @@
         <a href="#definiciones">Definiciones clave</a>
         <a href="#funcionales-no-funcionales">Funcionales vs. no funcionales</a>
         <a href="#historias-usuario">Historias de usuario</a>
-        <a href="#scrum">Scrum</a>
+        <a href="#vuca-agilismo">Agilismo y entorno VUCA</a>
+        <a href="#doce-principios">12 principios del Manifiesto Ágil</a>
         <a href="#videos">Video</a>
         <a href="#recursos">Recursos de consulta</a>
         <a href="#taller">Taller práctico</a>
@@ -353,24 +321,14 @@
 </div>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="d-flex flex-wrap justify-content-between gap-3">
-      <div>
-        <div class="footer-brand">Diseño de Aplicaciones</div>
-        <div>Material educativo de acceso abierto para estudiantes de desarrollo de software.</div>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Inicio</a>
-        <a href="tema-1.html">Temas</a>
-        <a href="tema-7.html">Casos de negocio</a>
-      </div>
+  <div class="container d-flex flex-wrap justify-content-between gap-3">
+    <div>
+      <div style="color:var(--text-muted); font-family: var(--font-head); font-size:1.05rem;">Diseño de Aplicaciones</div>
+      <div>Material educativo de acceso abierto para estudiantes de desarrollo de software.</div>
     </div>
-    <div class="footer-author">
-      <p class="footer-quote">
-        “Educar no es llenar sino encender.”
-        <cite>Jorge Wagensberg, profesor y físico español</cite>
-      </p>
-      <div class="footer-signature">Profe Daniel Moraj · Medellín, 2026</div>
+    <div class="d-flex gap-4">
+      <a href="index.html">Inicio</a>
+      <a href="tema-1.html">Temas</a>
     </div>
   </div>
 </footer>

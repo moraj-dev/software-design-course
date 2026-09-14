@@ -15,7 +15,7 @@
 <nav class="navbar navbar-expand-lg navbar-course fixed-top">
   <div class="container">
     <a class="navbar-brand" href="index.html"><span class="brand-mark">DA</span>Diseño de Aplicaciones</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú de navegación">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="nav">
@@ -27,7 +27,6 @@
         <li class="nav-item"><a class="nav-link" href="tema-4.html">4. Requerimientos</a></li>
         <li class="nav-item"><a class="nav-link" href="tema-5.html">5. Modelado</a></li>
         <li class="nav-item"><a class="nav-link" href="tema-6.html">6. Git/GitHub</a></li>
-        <li class="nav-item"><a class="nav-link" href="tema-7.html">7. Negocios</a></li>
       </ul>
     </div>
   </div>
@@ -35,7 +34,7 @@
 
 <header class="topic-hero" style="padding-top:7.5rem;">
   <div class="container">
-    <span class="topic-num">Tema 01 / 07</span>
+    <span class="topic-num">Tema 01 / 06</span>
     <h1>Introducción a la Programación de Software</h1>
     <p class="hero-desc">
       Historia y evolución de la programación, sus principales hitos, los lenguajes que
@@ -56,7 +55,7 @@
 
       <!-- OBJETIVOS -->
       <section class="section" id="objetivos">
-        <span class="section-kicker"><i class="bi bi-flag"></i>Objetivos de aprendizaje</span>
+        <span class="section-kicker">Objetivos de aprendizaje</span>
         <h2>Qué vas a lograr en este tema</h2>
         <ul class="check-list">
           <li data-toggle-check><i class="bi bi-circle"></i> Explicar por qué surgió la programación y qué problema resolvía originalmente.</li>
@@ -68,42 +67,42 @@
 
       <!-- DEFINICIONES -->
       <section class="section" id="definiciones">
-        <span class="section-kicker"><i class="bi bi-journal-bookmark"></i>Definiciones clave</span>
+        <span class="section-kicker">Definiciones clave</span>
         <h2>Vocabulario base del tema</h2>
         <div class="row g-3">
           <div class="col-md-6">
             <div class="def-card">
-              <span class="def-term"><i class="bi bi-cpu"></i>Programación</span>
+              <span class="def-term">Programación</span>
               <p>Proceso de diseñar y escribir instrucciones que una computadora puede ejecutar para resolver un problema o realizar una tarea.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="def-card">
-              <span class="def-term"><i class="bi bi-diagram-3"></i>Algoritmo</span>
+              <span class="def-term">Algoritmo</span>
               <p>Secuencia finita y ordenada de pasos que resuelve un problema concreto, independiente del lenguaje en que luego se implemente.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="def-card">
-              <span class="def-term"><i class="bi bi-braces"></i>Lenguaje de programación</span>
+              <span class="def-term">Lenguaje de programación</span>
               <p>Conjunto de reglas y sintaxis que permite traducir la lógica de un algoritmo en instrucciones que una máquina puede interpretar o compilar.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="def-card">
-              <span class="def-term"><i class="bi bi-diagram-2"></i>Paradigma de programación</span>
+              <span class="def-term">Paradigma de programación</span>
               <p>Estilo o filosofía para estructurar y pensar el código: por ejemplo, estructurado, orientado a objetos o funcional.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="def-card">
-              <span class="def-term"><i class="bi bi-arrow-left-right"></i>Compilador / Intérprete</span>
+              <span class="def-term">Compilador / Intérprete</span>
               <p>Programas que traducen código fuente a instrucciones ejecutables: el compilador traduce todo antes de ejecutar; el intérprete lo hace línea por línea.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="def-card">
-              <span class="def-term"><i class="bi bi-file-earmark-code"></i>Código fuente</span>
+              <span class="def-term">Código fuente</span>
               <p>Texto escrito por una persona programadora en un lenguaje de programación, antes de ser traducido a un formato ejecutable por la máquina.</p>
             </div>
           </div>
@@ -112,13 +111,12 @@
 
       <!-- LINEA DE TIEMPO -->
       <section class="section section-alt" id="hitos">
-        <span class="section-kicker"><i class="bi bi-clock-history"></i>Contenido</span>
+        <span class="section-kicker">Contenido</span>
         <h2>Hitos que marcaron la evolución de la programación</h2>
         <p class="text-muted-soft container-text">
           La programación no nació con las computadoras electrónicas: el impulso de dar
           instrucciones automatizadas a una máquina es más antiguo. Este recorrido resume
-          los momentos que más influyeron en cómo programamos hoy, desde el primer
-          algoritmo hasta la llegada de la inteligencia artificial como asistente de código.
+          los momentos que más influyeron en cómo programamos hoy.
         </p>
 
         <div class="timeline mt-4">
@@ -133,24 +131,9 @@
             <p>Alan Turing formaliza el concepto de "máquina universal", el fundamento teórico sobre el que se construirían después todos los computadores programables.</p>
           </div>
           <div class="timeline-item">
-            <span class="timeline-year">1945&ndash;1946</span>
-            <h4>ENIAC, la primera computadora electrónica de propósito general</h4>
-            <p>El Electronic Numerical Integrator and Computer (ENIAC), programado en buena parte por un equipo de mujeres matemáticas, marca el paso de las máquinas mecánicas a la computación electrónica.</p>
-          </div>
-          <div class="timeline-item">
             <span class="timeline-year">1957</span>
             <h4>FORTRAN, el primer lenguaje de alto nivel exitoso</h4>
-            <p>IBM libera <abbr class="acronym" title="FORmula TRANslation — nombre original en inglés">FORTRAN</abbr> <span class="gloss-en">(del inglés "FORmula TRANslation", traducción de fórmulas)</span>, pensado para cálculo científico, y demuestra que se puede escribir código legible para humanos y traducirlo automáticamente a lenguaje máquina.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">1959</span>
-            <h4>COBOL y la programación para los negocios</h4>
-            <p><abbr class="acronym" title="COmmon Business-Oriented Language — nombre original en inglés">COBOL</abbr> <span class="gloss-en">(ing. "COmmon Business-Oriented Language", lenguaje común orientado a negocios)</span> nace impulsado por Grace Hopper y se convierte en el estándar de la computación empresarial y bancaria durante décadas.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">1969</span>
-            <h4>UNIX y los orígenes de internet</h4>
-            <p>En los Laboratorios Bell nace UNIX, y ese mismo año se transmite el primer mensaje entre computadoras de ARPANET, la red que dio origen a internet.</p>
+            <p>IBM libera FORTRAN, pensado para cálculo científico, y demuestra que se puede escribir código legible para humanos y traducirlo automáticamente a lenguaje máquina.</p>
           </div>
           <div class="timeline-item">
             <span class="timeline-year">1972</span>
@@ -158,19 +141,9 @@
             <p>Dennis Ritchie crea C en los Laboratorios Bell; su influencia llega hasta hoy en lenguajes como C++, Java, JavaScript, Python y Go.</p>
           </div>
           <div class="timeline-item">
-            <span class="timeline-year">1981</span>
-            <h4>La computadora llega a los hogares y oficinas</h4>
-            <p>IBM lanza el IBM PC, un estándar de hardware abierto que impulsa la industria del software comercial y acerca la programación a millones de personas.</p>
-          </div>
-          <div class="timeline-item">
             <span class="timeline-year">1983&ndash;1991</span>
             <h4>Orientación a objetos y lenguajes de propósito general</h4>
             <p>C++ populariza la programación orientada a objetos; Linus Torvalds inicia Linux y Guido van Rossum publica Python, pensado en la legibilidad del código.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">1989&ndash;1991</span>
-            <h4>Nace la World Wide Web</h4>
-            <p>Tim Berners-Lee propone y construye, en el CERN, el primer navegador y servidor web, sentando las bases de la web tal como la conocemos.</p>
           </div>
           <div class="timeline-item">
             <span class="timeline-year">1995</span>
@@ -178,118 +151,57 @@
             <p>Se publican Java, JavaScript y PHP casi al mismo tiempo, sentando las bases del desarrollo web tal como lo conocemos.</p>
           </div>
           <div class="timeline-item">
-            <span class="timeline-year">2001</span>
-            <h4>El Manifiesto Ágil</h4>
-            <p>Diecisiete desarrolladores publican el Manifiesto por el Desarrollo Ágil de Software, dando origen a Scrum, Kanban y otras metodologías ágiles que hoy dominan la industria (ver Tema 4).</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2007</span>
-            <h4>El iPhone y la era de las apps móviles</h4>
-            <p>Apple presenta el iPhone y, un año después, su tienda de aplicaciones. Nace un nuevo ecosistema de desarrollo centrado en el software móvil.</p>
-          </div>
-          <div class="timeline-item">
             <span class="timeline-year">2008&ndash;2009</span>
             <h4>HTML5, Node.js y el auge del frontend/backend moderno</h4>
             <p>La llegada de HTML5 y de Node.js (JavaScript fuera del navegador) impulsa la separación clara entre frontend y backend en las aplicaciones web.</p>
           </div>
           <div class="timeline-item">
-            <span class="timeline-year">2013&ndash;2014</span>
-            <h4>La nube y los contenedores</h4>
-            <p>Docker populariza los contenedores como forma estándar de empaquetar software, y la computación en la nube (AWS, Azure, Google Cloud) cambia cómo se despliegan las aplicaciones.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2010s</span>
-            <h4>Móvil nativo y lenguajes modernos</h4>
-            <p>Swift (Apple, 2014) y Kotlin (JetBrains, 2011) nacen para el desarrollo móvil nativo, ofreciendo alternativas más seguras y expresivas a Objective-C y Java.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2020s&ndash;hoy</span>
-            <h4>Inteligencia artificial como asistente de programación</h4>
-            <p>Herramientas basadas en <abbr class="acronym" title="Artificial Intelligence — nombre original en inglés">IA</abbr> <span class="gloss-en">(ing. "Artificial Intelligence", inteligencia artificial)</span>, como GitHub Copilot y los asistentes conversacionales, acompañan hoy a quien programa, sugiriendo y generando código en tiempo real.</p>
+            <span class="timeline-year">2010s&ndash;hoy</span>
+            <h4>Móvil, nube y asistentes de programación con IA</h4>
+            <p>Swift y Kotlin nacen para el desarrollo móvil nativo; la computación en la nube cambia cómo se despliega el software, y hoy los asistentes de IA acompañan a quien programa.</p>
           </div>
         </div>
       </section>
 
       <!-- PERSONAJES Y EMPRESAS -->
       <section class="section" id="personajes">
-        <span class="section-kicker"><i class="bi bi-people-fill"></i>Contenido</span>
+        <span class="section-kicker">Contenido</span>
         <h2>Personajes y empresas destacados</h2>
-        <p class="text-muted-soft container-text">
-          Detrás de cada hito hubo personas y organizaciones concretas. Esta es una
-          muestra —no exhaustiva— de quienes más influyeron en la programación tal
-          como la conocemos hoy.
-        </p>
-        <div class="row g-3 mt-1">
+        <div class="row g-3">
           <div class="col-md-6">
             <div class="panel panel-accent">
-              <h3 class="h6"><i class="bi bi-person-badge"></i>Ada Lovelace</h3>
+              <h3 class="h6">Ada Lovelace</h3>
               <p class="text-muted-soft small mb-0">Matemática británica reconocida como la autora del primer algoritmo escrito para ser ejecutado por una máquina.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="panel panel-accent">
-              <h3 class="h6"><i class="bi bi-person-badge"></i>Alan Turing</h3>
+              <h3 class="h6">Alan Turing</h3>
               <p class="text-muted-soft small mb-0">Sentó las bases teóricas de la computación moderna con el concepto de máquina universal.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="panel panel-accent">
-              <h3 class="h6"><i class="bi bi-person-badge"></i>Dennis Ritchie y Ken Thompson</h3>
+              <h3 class="h6">Dennis Ritchie y Ken Thompson</h3>
               <p class="text-muted-soft small mb-0">Creadores de C y Unix en los Laboratorios Bell; su trabajo influye en casi todo lenguaje moderno.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="panel panel-accent">
-              <h3 class="h6"><i class="bi bi-person-badge"></i>Margaret Hamilton</h3>
+              <h3 class="h6">Margaret Hamilton</h3>
               <p class="text-muted-soft small mb-0">Dirigió el desarrollo del software de guiado del programa Apollo y popularizó el término "ingeniería de software".</p>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="panel panel-accent">
-              <h3 class="h6"><i class="bi bi-person-badge"></i>Grace Hopper</h3>
-              <p class="text-muted-soft small mb-0">Pionera de los compiladores; impulsó COBOL y la idea de programar en un lenguaje cercano al inglés en lugar de código máquina.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-accent">
-              <h3 class="h6"><i class="bi bi-person-badge"></i>Tim Berners-Lee</h3>
-              <p class="text-muted-soft small mb-0">Inventó la World Wide Web en el CERN: el navegador, el servidor y el protocolo HTTP que la hicieron posible.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-accent">
-              <h3 class="h6"><i class="bi bi-person-badge"></i>Linus Torvalds y Guido van Rossum</h3>
-              <p class="text-muted-soft small mb-0">Creadores de Linux y Python respectivamente; ambos proyectos nacieron como iniciativas personales que hoy sostienen buena parte de la infraestructura mundial.</p>
+            <div class="panel panel-warm">
+              <h3 class="h6">IBM</h3>
+              <p class="text-muted-soft small mb-0">Impulsó FORTRAN y buena parte de la computación empresarial durante el siglo XX.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="panel panel-warm">
-              <h3 class="h6"><i class="bi bi-building"></i>IBM</h3>
-              <p class="text-muted-soft small mb-0">Impulsó FORTRAN, el IBM PC y buena parte de la computación empresarial durante el siglo XX.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-warm">
-              <h3 class="h6"><i class="bi bi-building"></i>Bell Labs, Microsoft y Google</h3>
+              <h3 class="h6">Bell Labs, Microsoft y Google</h3>
               <p class="text-muted-soft small mb-0">Organizaciones que originaron o popularizaron lenguajes y plataformas que siguen vigentes: Unix/C, Windows/.NET y Go/Android.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-warm">
-              <h3 class="h6"><i class="bi bi-building"></i>Apple</h3>
-              <p class="text-muted-soft small mb-0">Popularizó la interfaz gráfica de usuario, creó el ecosistema iOS/App Store y desarrolló Swift para programación móvil moderna.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-warm">
-              <h3 class="h6"><i class="bi bi-building"></i>Amazon (AWS) y Meta</h3>
-              <p class="text-muted-soft small mb-0">AWS popularizó la nube como infraestructura estándar; Meta creó y liberó React, uno de los frameworks de frontend más usados hoy.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-warm">
-              <h3 class="h6"><i class="bi bi-building"></i>Oracle y SAP</h3>
-              <p class="text-muted-soft small mb-0">Referentes históricos de bases de datos relacionales y sistemas empresariales (ERP) que aún sostienen la operación de miles de compañías.</p>
             </div>
           </div>
         </div>
@@ -297,7 +209,7 @@
 
       <!-- PARADIGMAS -->
       <section class="section section-alt" id="paradigmas">
-        <span class="section-kicker"><i class="bi bi-diagram-2"></i>Contenido</span>
+        <span class="section-kicker">Contenido</span>
         <h2>Paradigmas de programación</h2>
         <div class="table-responsive">
           <table class="table table-req">
@@ -332,7 +244,7 @@
 
       <!-- VIDEOS -->
       <section class="section" id="videos">
-        <span class="section-kicker"><i class="bi bi-play-btn"></i>Video</span>
+        <span class="section-kicker">Video</span>
         <h2>Para ver antes de continuar</h2>
         <div class="row g-4">
           <div class="col-md-6">
@@ -352,7 +264,7 @@
 
       <!-- RECURSOS DE CONSULTA -->
       <section class="section section-alt" id="recursos">
-        <span class="section-kicker"><i class="bi bi-link-45deg"></i>Páginas de consulta</span>
+        <span class="section-kicker">Páginas de consulta</span>
         <h2>Para profundizar</h2>
         <div class="row g-3">
           <div class="col-md-4">
@@ -378,7 +290,7 @@
 
       <!-- TALLER PRÁCTICO -->
       <section class="section" id="taller">
-        <span class="section-kicker"><i class="bi bi-tools"></i>Taller práctico</span>
+        <span class="section-kicker">Taller práctico</span>
         <h2>Tu línea de tiempo comentada</h2>
         <div class="workshop-box">
           <div class="workshop-head">
@@ -401,7 +313,7 @@
 
       <!-- AUTOEVALUACIÓN -->
       <section class="section section-alt" id="autoevaluacion">
-        <span class="section-kicker"><i class="bi bi-check2-square"></i>Autoevaluación</span>
+        <span class="section-kicker">Autoevaluación</span>
         <h2>¿Quedó claro el tema?</h2>
         <ul class="check-list">
           <li data-toggle-check><i class="bi bi-circle"></i> Puedo nombrar al menos cuatro hitos de la historia de la programación y explicar por qué importaron.</li>
@@ -445,24 +357,14 @@
 </div>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="d-flex flex-wrap justify-content-between gap-3">
-      <div>
-        <div class="footer-brand">Diseño de Aplicaciones</div>
-        <div>Material educativo de acceso abierto para estudiantes de desarrollo de software.</div>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Inicio</a>
-        <a href="tema-1.html">Temas</a>
-        <a href="tema-7.html">Casos de negocio</a>
-      </div>
+  <div class="container d-flex flex-wrap justify-content-between gap-3">
+    <div>
+      <div style="color:var(--text-muted); font-family: var(--font-head); font-size:1.05rem;">Diseño de Aplicaciones</div>
+      <div>Material educativo de acceso abierto para estudiantes de desarrollo de software.</div>
     </div>
-    <div class="footer-author">
-      <p class="footer-quote">
-        “Educar no es llenar sino encender.”
-        <cite>Jorge Wagensberg, profesor y físico español</cite>
-      </p>
-      <div class="footer-signature">Profe Daniel Moraj · Medellín, 2026</div>
+    <div class="d-flex gap-4">
+      <a href="index.html">Inicio</a>
+      <a href="tema-1.html">Temas</a>
     </div>
   </div>
 </footer>

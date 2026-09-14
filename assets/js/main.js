@@ -38,18 +38,4 @@ document.addEventListener('DOMContentLoaded', function () {
       item.classList.toggle('text-decoration-line-through', done);
     });
   });
-
-  // Menú móvil: al elegir un enlace, el menú colapsable se cierra solo,
-  // para que el contenido de la página quede visible de inmediato.
-  var navCollapseEl = document.getElementById('nav');
-  if (navCollapseEl && window.bootstrap) {
-    var navCollapseInstance = window.bootstrap.Collapse.getOrCreateInstance(navCollapseEl, { toggle: false });
-    navCollapseEl.querySelectorAll('.nav-link').forEach(function (link) {
-      link.addEventListener('click', function () {
-        if (navCollapseEl.classList.contains('show')) {
-          navCollapseInstance.hide();
-        }
-      });
-    });
-  }
 });
