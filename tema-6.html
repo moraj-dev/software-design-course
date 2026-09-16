@@ -32,6 +32,7 @@
   </div>
 </nav>
 
+
 <header class="topic-hero" style="padding-top:7.5rem;">
   <div class="container">
     <span class="topic-num">Tema 06 / 06</span>
@@ -91,44 +92,19 @@
 
       <section class="section section-alt" id="flujo-basico">
         <span class="section-kicker">Contenido</span>
-        <h2>El flujo básico de trabajo con Git</h2>
-        <div class="panel mt-1" style="overflow-x:auto;">
-          <svg viewBox="0 0 720 160" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:720px; display:block; margin:0 auto;">
-            <g font-family="Inter, sans-serif" font-size="12.5" fill="#e8eaed">
-              <rect x="10" y="55" width="120" height="50" rx="4" fill="#2c3035" stroke="#40464d"/>
-              <text x="70" y="84" text-anchor="middle">Directorio de trabajo</text>
-
-              <rect x="200" y="55" width="120" height="50" rx="4" fill="#2c3035" stroke="#8fb2c4"/>
-              <text x="260" y="84" text-anchor="middle">Área de staging</text>
-
-              <rect x="390" y="55" width="120" height="50" rx="4" fill="#2c3035" stroke="#c9a97e"/>
-              <text x="450" y="84" text-anchor="middle">Repositorio local</text>
-
-              <rect x="580" y="55" width="130" height="50" rx="4" fill="#2c3035" stroke="#93bda1"/>
-              <text x="645" y="84" text-anchor="middle">GitHub (remoto)</text>
-            </g>
-            <g stroke="#7d848d" stroke-width="1.3" fill="none" marker-end="url(#arrow)">
-              <path d="M132 80 H198"/>
-              <path d="M322 80 H388"/>
-              <path d="M512 80 H578"/>
-            </g>
-            <defs>
-              <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                <path d="M0,0 L6,3 L0,6 Z" fill="#7d848d"/>
-              </marker>
-            </defs>
-            <g font-family="JetBrains Mono, monospace" font-size="10.5" fill="#a8afb8">
-              <text x="165" y="45" text-anchor="middle">git add</text>
-              <text x="355" y="45" text-anchor="middle">git commit</text>
-              <text x="545" y="45" text-anchor="middle">git push</text>
-            </g>
-          </svg>
+        <h2>El flujo completo de trabajo en equipo</h2>
+        <p class="text-muted-soft container-text">
+          Simula un entorno colaborativo real en un flujo de trabajo típico: Tech Lead (Gestor) crea el proyecto, Dev 1 agrega funcionalidades, Dev 2 trabaja en paralelo. Visualiza cada paso con swimlanes que muestran claramente qué hace cada rol.
+        </p>
+        <div style="margin: 24px 0;">
+          <a href="git-simulator.html" class="btn btn-primary btn-lg" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;">
+            <i class="bi bi-play-circle"></i>
+            Simulador Interactivo - Flujo Colaborativo
+          </a>
         </div>
-        <p class="text-muted-soft container-text mt-3">
-          <span class="kbd-tag">git add</span> mueve tus cambios al área de staging;
-          <span class="kbd-tag">git commit</span> los guarda como un punto del historial local;
-          <span class="kbd-tag">git push</span> envía esos commits al repositorio remoto en GitHub,
-          donde el resto del equipo puede verlos.
+        <p class="text-muted-soft container-text" style="font-size: 12px; margin-top: 16px;">
+          <i class="bi bi-info-circle" style="margin-right: 4px;"></i>
+          Ver el flujo colaborativo real en un simulador interactivo: Tech Lead prepara el proyecto → Dev 1 desarrolla login → Dev 2 desarrolla carrito. Cada rol en su propio carril con estados visuales (amarillo: pendiente, verde: completado).
         </p>
       </section>
 
@@ -287,5 +263,6 @@
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
+
 </body>
 </html>
