@@ -301,7 +301,12 @@
         <h1><i class="bi bi-diagram-3"></i> Git Simulator</h1>
         <p style="font-size: 12px; color: #8b949e; margin-top: 4px;">Flujo Colaborativo con Swimlanes</p>
     </div>
-    <span class="header-badge"><i class="bi bi-play-circle"></i> Interactivo</span>
+    <div style="display: flex; gap: 12px; align-items: center;">
+        <span class="header-badge"><i class="bi bi-play-circle"></i> Interactivo</span>
+        <button id="theme-toggle-btn" onclick="toggleTheme()" style="background: rgba(79, 185, 80, 0.1); border: 1px solid #3fb950; color: #3fb950; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 500;">
+            <i class="bi bi-sun"></i> Claro
+        </button>
+    </div>
 </div>
 
 <div class="main-wrapper">
@@ -707,6 +712,7 @@ function resetAll() {
 // Iniciar
 document.addEventListener('DOMContentLoaded', init);
 </script>
+<script src="assets/js/theme-toggle.js"></script>
 
 </body>
 </html>
